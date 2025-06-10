@@ -38,6 +38,9 @@ nav:
     #     - label: 项目文档
     #       icon: book
     #       url: https://wiki.krt.moe
+    - label: 搜尋
+      icon: search
+      url: /search/
     - label: 部落格舊站
       icon: clock-o
       url: https://blog-legacy.yuaner.tw
