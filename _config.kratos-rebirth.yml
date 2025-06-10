@@ -23,38 +23,45 @@ image:
 # 顶部导航栏配置
 nav:
   items:
-    - label: 首页
+    - label: 首頁
       icon: home
       url: /
-    - label: 档案馆
-      icon: file
+    - label: Archives
+      icon: list
       url: /archives/
-    - label: 链接
-      icon: link
-      submenu:
-        - label: 代码仓库
-          icon: code
-          url: https://github.com/Candinya/Kratos-Rebirth
-        - label: 项目文档
-          icon: book
-          url: https://wiki.krt.moe
+    # - label: 相關連結
+    #   icon: link
+    #   submenu:
+    #     - label: 代码仓库
+    #       icon: code
+    #       url: https://github.com/Candinya/Kratos-Rebirth
+    #     - label: 项目文档
+    #       icon: book
+    #       url: https://wiki.krt.moe
+    - label: 部落格舊站
+      icon: clock-o
+      url: https://blog-legacy.yuaner.tw
 
 # Footer 页脚配置
 footer:
-  # links:
-  #   - icon: github
-  #     link: https://github.com/kratos-rebirth
-  #   - icon: rss
-  #     link: /atom.xml
+  links:
+    - icon: home
+      link: https://yuaner.tw
+    - icon: github
+      link: https://github.com/chyuaner
+    - icon: facebook
+      link: https://facebook.com/chyuaner
+    - icon: rss
+      link: /atom.xml
   components:
     uptime:
       since: "2025/06/09 10:25:33"
-      text: "本站已在风雨中飘摇"
+      text: "本站建置到現在 已經"
     author:
-      homepage: "https://github.com/Candinya/Kratos-Rebirth/graphs/contributors"
+      homepage: "https://yuaner.tw"
     additional: # 托管信息等
-      - - 由 <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a> 强力驱动
-        - 在 <a href="https://github.io" target="_blank">Github Pages</a> 暖心托管
+      - - Power by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+        - Source <a href="https://github.com/chyuaner" target="_blank">Github Pages</a>
 
 # Post 文章配置
 posts:
