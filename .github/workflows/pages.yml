@@ -28,11 +28,9 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: npm install
-      - name: Install kratos-rebirth
-        run: cd themes/kratos-rebirth && npm install && npm run build && cd ../../
+        run: npm install && git submodule foreach 'npm install || exit 1'
       - name: Build
-        run: npm run build
+        run: npm run build && git submodule foreach 'npm run build || exit 1'
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
