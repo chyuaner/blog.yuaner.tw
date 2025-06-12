@@ -27,8 +27,8 @@ nav:
     - label: 首頁
       icon: home
       url: /
-    - label: Archives
-      icon: list
+    - label: 所有文章
+      icon: files-o
       url: /archives/
     # - label: 相關連結
     #   icon: link
