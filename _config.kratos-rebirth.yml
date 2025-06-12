@@ -167,10 +167,9 @@ comments:
 
 # 访问数量统计
 visit_count:
-  enable_at:
-    - post
+  enable_at: []
   template:
-    _shared: "<span class='s3_pv'>?</span>"
+    _shared: ""
     index: ""
     post: ""
 
