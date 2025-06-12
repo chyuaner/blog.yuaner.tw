@@ -31,9 +31,12 @@
         window.addEventListener("message", function giscusMetadataListener(event) {
             if (event.origin !== "https://giscus.app") return;
             const data = event.data;
+            // console.log(data);
             if (data?.giscus?.discussion?.totalCommentCount !== undefined) {
                 // 有留言數據
-                const count = data.giscus.discussion.totalCommentCount;
+                const comment = data.giscus.discussion.totalCommentCount;
+                const reply_count = data.giscus.discussion.totalReplyCount;
+                const count = comment + reply_count;
                 const countElem = document.getElementById("giscus_count");
                 if (countElem) countElem.textContent = count;
             } else if (data?.giscus?.error === "Discussion not found") {
