@@ -13,7 +13,7 @@ index:
 # 图片配置
 image:
   favicon: "/assets/favicon.png" # 站点图标
-  #avatar: "/assets/logo.webp" # 个人信息挂件上的头像
+  avatar: "https://gravatar.com/avatar/39d6ecc6926e02f7241c8d9225f9eb5a6491a6f13cfaf6ef261b4e44dbd6be55?s=200" # 个人信息挂件上的头像
   banner:
     light: "https://dev.krt.moe/demo-assets/banner.webp"
     dark: "https://dev.krt.moe/demo-assets/banner_dark.webp"
