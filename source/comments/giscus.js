@@ -19,7 +19,7 @@
         script.setAttribute('data-strict', '0');
         script.setAttribute('data-reactions-enabled', '1');
         script.setAttribute('data-emit-metadata', '0');
-        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-input-position', 'bottom');
         script.setAttribute('data-theme', 'preferred_color_scheme');
         script.setAttribute('data-lang', 'zh-TW');
         // script.setAttribute('data-loading', 'lazy');
