@@ -39,6 +39,9 @@ nav:
     #     - label: 项目文档
     #       icon: book
     #       url: https://wiki.krt.moe
+    - label: 關於本站
+      icon: info-circle
+      url: /about/
     - label: 搜尋
       icon: search
       url: /search/
