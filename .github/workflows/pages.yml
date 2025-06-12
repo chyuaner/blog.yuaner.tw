@@ -23,7 +23,9 @@ jobs:
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
-          path: node_modules
+          path: |
+            node_modules
+            themes/kratos-rebirth/node_modules
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
@@ -32,7 +34,10 @@ jobs:
       - name: Create empty db.json (hexo-include-markdown issue 8)
         run: touch db.json
       - name: Install kratos-rebirth
-        run: cd themes/kratos-rebirth && npm install && npm run build && cd ../../
+        working-directory: themes/kratos-rebirth
+        run: |
+          npm install
+          npm run build
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
