@@ -151,13 +151,13 @@ comments:
       post: ""
       page: ""
   count:
-    enable_at: []
+    enable_at: 
     # - index
-    # - post
+    - post
     template:
       _shared: ""
       index: ""
-      post: ""
+      post: "<span id='giscus_count'>?</span>"
 
 # 访问数量统计
 visit_count:
