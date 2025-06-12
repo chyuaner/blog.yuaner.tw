@@ -1,6 +1,5 @@
 (() => {
     const loadComments = async () => {
-        // Giscus 留言系統主程式 ------------------------------------------------------
         const giscusContainer = document.getElementById('giscus_container');
         if (!giscusContainer) return;
 
@@ -19,7 +18,7 @@
         script.setAttribute('data-mapping', 'pathname');
         script.setAttribute('data-strict', '0');
         script.setAttribute('data-reactions-enabled', '1');
-        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-emit-metadata', '1'); // ← 要開啟這個功能
         script.setAttribute('data-input-position', 'bottom');
         script.setAttribute('data-theme', 'preferred_color_scheme');
         script.setAttribute('data-lang', 'zh-TW');
@@ -27,26 +26,28 @@
         script.setAttribute('async', '');
 
         giscusContainer.appendChild(script);
-
-        // 自行 Patch Giscus 留言數量 ------------------------------------------------
-        const pathname = window.location.pathname.replace(/^\/|\/$/g, '') + '/'; // 去除前後斜線，保持 Giscus 格式
-        const repo = "chyuaner/blog.yuaner.tw"; // 你的 GitHub repo
-        const category = "Blog Comments"; // 你的 category 名稱
-
-        const url = `https://giscus.app/api/discussions?repo=${encodeURIComponent(repo)}&term=${encodeURIComponent(pathname)}&category=${encodeURIComponent(category)}&number=0&strict=false&last=1`;
-
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                const count = data.discussion?.totalCommentCount ?? 0;
-                document.getElementById("giscus_count").textContent = count;
-            })
-            .catch(() => {
-                document.getElementById("giscus_count").textContent = "f";
-            });
+        
+        // 在文章頁面顯示留言數量功能
+        window.addEventListener("message", function giscusMetadataListener(event) {
+            if (event.origin !== "https://giscus.app") return;
+            const data = event.data;
+            // const countElem = document.getElementById("giscus_count");
+            // countElem.textContent = data;
+            // console.log(data);
+            if (data?.giscus?.discussion?.totalCommentCount !== undefined) {
+                // 有留言數據
+                const count = data.giscus.discussion.totalCommentCount;
+                const countElem = document.getElementById("giscus_count");
+                if (countElem) countElem.textContent = count;
+            } else if (data?.giscus?.error === "Discussion not found") {
+                // 討論串不存在，視同留言數0
+                const countElem = document.getElementById("giscus_count");
+                if (countElem) countElem.textContent = "0";
+            }
+        });
     };
 
-    // 自動載入---------------------------------------------------------------------
+    // 載入＆pjax 重新掛載
     window.loadComments = loadComments;
     window.addEventListener('pjax:success', () => {
         window.loadComments = loadComments;
