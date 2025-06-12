@@ -31,9 +31,6 @@
         window.addEventListener("message", function giscusMetadataListener(event) {
             if (event.origin !== "https://giscus.app") return;
             const data = event.data;
-            // const countElem = document.getElementById("giscus_count");
-            // countElem.textContent = data;
-            // console.log(data);
             if (data?.giscus?.discussion?.totalCommentCount !== undefined) {
                 // 有留言數據
                 const count = data.giscus.discussion.totalCommentCount;
