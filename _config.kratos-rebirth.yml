@@ -42,6 +42,9 @@ nav:
     - label: 關於本站
       icon: info-circle
       url: /about/
+    - label: RSS
+      icon: rss
+      url: /atom.xml
     - label: 搜尋
       icon: search
       url: /search/
@@ -58,8 +61,8 @@ footer:
       link: https://github.com/chyuaner
     - icon: facebook
       link: https://facebook.com/chyuaner
-    - icon: rss
-      link: /atom.xml
+    # - icon: rss
+    #   link: /atom.xml
   components:
     uptime:
       since: "2025/06/09 10:25:33"

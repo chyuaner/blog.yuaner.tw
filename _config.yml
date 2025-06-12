@@ -102,6 +102,24 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: kratos-rebirth
 
+feed:
+  enable: true
+  # Generate both atom and rss2 feeds
+  type:
+    - atom
+    # - rss2
+  path:
+    - atom.xml
+    # - rss2.xml
+  limit: false
+  hub:
+  content: true
+  # content_limit: 140
+  # content_limit_delim: ' '
+  order_by: -date
+  # icon: icon.png
+  autodiscovery: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
