@@ -68,7 +68,7 @@ footer:
       homepage: "https://yuaner.tw"
     additional: # 托管信息等
       - - Power by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a>
-        - Source <a href="https://github.com/chyuaner" target="_blank">Github Pages</a>
+        - Source <a href="https://github.com/chyuaner/blog.yuaner.tw" target="_blank">Github Pages</a>
 
 # Post 文章配置
 posts:
