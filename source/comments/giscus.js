@@ -22,7 +22,7 @@
         script.setAttribute('data-input-position', 'top');
         script.setAttribute('data-theme', 'preferred_color_scheme');
         script.setAttribute('data-lang', 'zh-TW');
-        script.setAttribute('data-loading', 'lazy');
+        // script.setAttribute('data-loading', 'lazy');
         script.setAttribute('crossorigin', 'anonymous');
         script.setAttribute('async', '');
 
