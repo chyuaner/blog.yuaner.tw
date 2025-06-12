@@ -29,6 +29,8 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install && git submodule foreach 'npm install || exit 1'
+      - name: Create empty db.json (hexo-include-markdown issue 8)
+        run: touch db.json
       - name: Build
         run: npm run build && git submodule foreach 'npm run build || exit 1'
       - name: Upload Pages artifact
