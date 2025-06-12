@@ -28,11 +28,13 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: npm install && git submodule foreach 'npm install || exit 1'
+        run: npm install
       - name: Create empty db.json (hexo-include-markdown issue 8)
         run: touch db.json
+      - name: Install kratos-rebirth
+        run: cd themes/kratos-rebirth && npm install && npm run build && cd ../../
       - name: Build
-        run: npm run build && git submodule foreach 'npm run build || exit 1'
+        run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
