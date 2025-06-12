@@ -146,7 +146,7 @@ comments:
       - post
       - page
     template:
-      _shared: "<div id='giscus_container' class='kr-comments lazy-load' data-path='$PATH' data-full-path='$PATH_FULL'></div>"
+      _shared: "<div id='giscus_container' class='kr-comments' data-path='$PATH' data-full-path='$PATH_FULL'></div>"
       index: ""
       post: ""
       page: ""
