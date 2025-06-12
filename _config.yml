@@ -107,10 +107,10 @@ feed:
   # Generate both atom and rss2 feeds
   type:
     - atom
-    # - rss2
+    - rss2
   path:
     - atom.xml
-    # - rss2.xml
+    - rss2.xml
   limit: false
   hub:
   content: true
