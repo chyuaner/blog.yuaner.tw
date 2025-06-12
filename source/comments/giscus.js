@@ -13,8 +13,8 @@
         script.src = 'https://giscus.app/client.js';
         script.setAttribute('data-repo', 'chyuaner/blog.yuaner.tw');
         script.setAttribute('data-repo-id', 'R_kgDOO5dOzg');
-        script.setAttribute('data-category', 'Announcements');
-        script.setAttribute('data-category-id', 'DIC_kwDOO5dOzs4CrZfX');
+        script.setAttribute('data-category', 'Blog Comments');
+        script.setAttribute('data-category-id', 'DIC_kwDOO5dOzs4CrZ46');
         script.setAttribute('data-mapping', 'pathname');
         script.setAttribute('data-strict', '0');
         script.setAttribute('data-reactions-enabled', '1');
