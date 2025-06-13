@@ -28,7 +28,7 @@ nav:
       icon: home
       url: /
     - label: 所有文章
-      icon: files-o
+      icon: <i class="fa-regular fa-file-zipper"></i>
       url: /archives/
     # - label: 相關連結
     #   icon: link
@@ -49,7 +49,7 @@ nav:
       icon: search
       url: /search/
     - label: 部落格舊站
-      icon: clock-o
+      icon: <i class="fa-solid fa-right-to-bracket"></i>
       url: https://blog-legacy.yuaner.tw
 
 # Footer 页脚配置
@@ -57,9 +57,9 @@ footer:
   links:
     - icon: home
       link: https://yuaner.tw
-    - icon: github
+    - icon: <i class="fa-brands fa-github"></i>
       link: https://github.com/chyuaner
-    - icon: facebook
+    - icon: <i class="fa-brands fa-facebook-f"></i>
       link: https://facebook.com/chyuaner
     # - icon: rss
     #   link: /atom.xml
@@ -106,15 +106,15 @@ sidebar:
 # 分享组件设置
 share:
   enable: true
-  title: "分享这一刻"
-  message: "让朋友们也来瞅瞅！"
+  title: "分享這篇文章"
+  message: ""
   platforms:
     - name: "Facebook"
-      icon: <i class="fa fa-facebook"></i>
+      icon: <i class="fa-brands fa-facebook-f"></i>
       color: "#4050a0"
       link: "https://www.facebook.com/sharer/sharer.php?u=$URL"
     - name: "Twitter / X"
-      icon: <i class="fa fa-twitter"></i>
+      icon: <i class="fa-brands fa-twitter"></i>
       color: "#5CA3D4"
       link: "https://x.com/intent/tweet?text=$TITLE&url=$URL"
     - name: "threads"
@@ -183,7 +183,8 @@ visit_count:
 
 ################## 额外的注入代码 ##################
 additional_injections:
-  head: "" # 搜索引擎验证，或是追加的样式表
+  head: |
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
   footer: ""
   after_footer: |
     <script src="/comments/giscus.js"></script>

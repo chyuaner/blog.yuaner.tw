@@ -33,6 +33,12 @@ jobs:
         run: npm install
       - name: Create empty db.json (hexo-include-markdown issue 8)
         run: touch db.json
+      - name: Copy Fontawesome to source/fontawesome
+        run: |
+          mkdir -p source/fontawesome/css
+          mkdir -p source/fontawesome/webfonts
+          cp node_modules/@fortawesome/fontawesome-free/css/all.min.css source/fontawesome/css/
+          cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* source/fontawesome/webfonts/
       - name: Install kratos-rebirth
         working-directory: themes/kratos-rebirth
         run: |
