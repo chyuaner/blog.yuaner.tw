@@ -13,6 +13,11 @@
 
 
 ## 有額外安裝的Plugin
+* hexo-generator-feed
+    * ~~hexo-feed~~ (當備用)
+* hexo-hide-posts
+* hexo-include-markdown
+* @fortawesome/fontawesome-free
 
 ## 有額外調整的部分
 
@@ -20,6 +25,11 @@
 * 調整assets圖片資源檔架構
 * 建立Github Action workflows自動建置
     * 因為有客製化kratos-rebirth，配合修改script
+    * 有使用 hexo-include-markdown ，發現無db.json時會壞掉，所以再補上腳本補上空檔案
+* 使用giscus用Github Discussions存放留言內容
+* 自建Firebase來存放views_count開啟次數統計
+    * 重要教學: <https://www.jingjies-blog.com/blog/2022/06/22/add-view-counter-to-Hexo-in-Express/>
+* 使用 hexo-include-markdown ，將 source 資料夾外部的README.md連結進來當作about頁面使用
 
 ## 留言系統 giscus
 ### 有額外處理的部分
