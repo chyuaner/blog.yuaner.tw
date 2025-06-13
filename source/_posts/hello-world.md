@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: 2025-06-09 10:25:33
+hidden: true
 cover:
 toc: true
 ---
