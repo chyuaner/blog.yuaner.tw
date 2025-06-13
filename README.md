@@ -4,6 +4,14 @@
 新部落格主站
 ===
 
+## 本站有使用的素材
+### 背景
+* <a href='https://zh.pngtree.com/freebackground/light-snow-landscape-train-illustration-background_967224.html'>免費的背景照片來自 zh.pngtree.com/</a>
+* <https://zh.pngtree.com/freebackground/autumn-landscape-train-far-illustration-background_939895.html>
+* <https://free-paper-texture.com/green-wood-chips-paper/>
+* <https://free-paper-texture.com/black-wood-chips-texture/>
+
+
 ## 有額外安裝的Plugin
 
 ## 有額外調整的部分
