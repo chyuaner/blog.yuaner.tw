@@ -120,6 +120,25 @@ feed:
   # icon: icon.png
   autodiscovery: true
 
+hexo_info_api:
+  allowOrigin: "*" # Set to "*" to allow all origins (Access-Control-Allow-Origin)
+  enable: # enable what api u need
+  - getInfo
+  - getPostCount
+  - getPosts
+  - getPostsByCategory
+  - getPostsByCategoryId
+  - getPostsByTag
+  - getPostsByTagId
+  - getPostByPath
+  - getPostById
+  - getCategories
+  - getTags
+  - getLatestPost
+  - getLatest5Posts
+  # Disable default api(host:port/api/) default: false
+  disable_default_api: false 
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
