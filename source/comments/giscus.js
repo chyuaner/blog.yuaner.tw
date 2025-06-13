@@ -1,3 +1,9 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js';
+import {
+getDatabase, ref, get, set, child,
+// eslint-disable-next-line import/no-unresolved
+} from 'https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js';
+
 (() => {
     const loadComments = async () => {
         const giscusContainer = document.getElementById('giscus_container');
@@ -45,6 +51,43 @@
                 if (countElem) countElem.textContent = "0";
             }
         });
+
+        // 顯示觀看次數相關
+        // The web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5D1J15ns8jjXEiEtzyG6wDIgsQ3DrmJ4",
+            authDomain: "blog-visit-count.firebaseapp.com",
+            databaseURL: "https://blog-visit-count-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "blog-visit-count",
+            storageBucket: "blog-visit-count.firebasestorage.app",
+            messagingSenderId: "394854889275",
+            appId: "1:394854889275:web:411c2d0ea6b1c8e4a0691e"
+        };
+        // Initialize Firebase
+        const firebase = initializeApp(firebaseConfig);
+        const db = getDatabase(firebase, firebaseConfig.databaseURL);
+        const oriUrl = window.location.host;
+        const curUrl = oriUrl + window.location.pathname;
+    
+        const readVisits = async (url, selector) => {
+            const dbKey = decodeURI(url.replace(/\/|\./g, '_'));
+            let count = 1;
+            const res = await get(child(ref(db), dbKey));
+            if (res.exists()) {
+            count = parseInt(res.val() || 0, 10) + 1;
+            }
+            await await set(ref(db, dbKey), count);
+            if (selector.length > 0) {
+            // eslint-disable-next-line no-param-reassign
+            selector[0].innerText = count;
+            }
+        };
+    
+        readVisits(oriUrl, document.querySelectorAll('#site_visits_count'));
+        if (curUrl && curUrl !== '_') {
+            readVisits(`page/${curUrl}`, document.querySelectorAll('#page_views_count'));
+        }
     };
 
     // 載入＆pjax 重新掛載

@@ -177,9 +177,10 @@ comments:
 
 # 访问数量统计
 visit_count:
-  enable_at: []
+  enable_at:
+      - post
   template:
-    _shared: ""
+    _shared: "<span id='page_views_count'>?</span>"
     index: ""
     post: ""
 
@@ -189,4 +190,5 @@ additional_injections:
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
   footer: ""
   after_footer: |
-    <script src="/comments/giscus.js"></script>
+    
+    <script type="module" src="/comments/giscus.js"></script>
