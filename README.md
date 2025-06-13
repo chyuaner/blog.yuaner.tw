@@ -18,6 +18,7 @@
 * hexo-hide-posts
 * hexo-include-markdown
 * @fortawesome/fontawesome-free
+* hexo-info-api
 
 ## 有額外調整的部分
 
