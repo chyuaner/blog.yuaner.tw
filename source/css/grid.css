@@ -1,0 +1,77 @@
+/* :root {
+  --screen-sm: 768px;
+  --screen-md: 992px;
+  --screen-lg: 1200px;
+
+  --gap: 1rem;
+} */
+
+/* 容器 */
+.xg-grid {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* 欄位寬度：col-1 ~ col-12 */
+.xg-col-1  { grid-column: span 1; }
+.xg-col-2  { grid-column: span 2; }
+.xg-col-3  { grid-column: span 3; }
+.xg-col-4  { grid-column: span 4; }
+.xg-col-5  { grid-column: span 5; }
+.xg-col-6  { grid-column: span 6; }
+.xg-col-7  { grid-column: span 7; }
+.xg-col-8  { grid-column: span 8; }
+.xg-col-9  { grid-column: span 9; }
+.xg-col-10 { grid-column: span 10; }
+.xg-col-11 { grid-column: span 11; }
+.xg-col-12 { grid-column: span 12; }
+
+/* 響應式：中型螢幕以下（< 1200px） */
+@media (max-width: 1199px) {
+  .xg-col-lg-1  { grid-column: span 1; }
+  .xg-col-lg-2  { grid-column: span 2; }
+  .xg-col-lg-3  { grid-column: span 3; }
+  .xg-col-lg-4  { grid-column: span 4; }
+  .xg-col-lg-5  { grid-column: span 5; }
+  .xg-col-lg-6  { grid-column: span 6; }
+  .xg-col-lg-7  { grid-column: span 7; }
+  .xg-col-lg-8  { grid-column: span 8; }
+  .xg-col-lg-9  { grid-column: span 9; }
+  .xg-col-lg-10 { grid-column: span 10; }
+  .xg-col-lg-11 { grid-column: span 11; }
+  .xg-col-lg-12 { grid-column: span 12; }
+}
+
+/* 響應式：中小型螢幕以下（< 992px） */
+@media (max-width: 991px) {
+  .xg-col-md-1  { grid-column: span 1; }
+  .xg-col-md-2  { grid-column: span 2; }
+  .xg-col-md-3  { grid-column: span 3; }
+  .xg-col-md-4  { grid-column: span 4; }
+  .xg-col-md-5  { grid-column: span 5; }
+  .xg-col-md-6  { grid-column: span 6; }
+  .xg-col-md-7  { grid-column: span 7; }
+  .xg-col-md-8  { grid-column: span 8; }
+  .xg-col-md-9  { grid-column: span 9; }
+  .xg-col-md-10 { grid-column: span 10; }
+  .xg-col-md-11 { grid-column: span 11; }
+  .xg-col-md-12 { grid-column: span 12; }
+}
+
+/* 響應式：手機（< 768px） */
+@media (max-width: 767px) {
+  .xg-col-sm-1  { grid-column: span 1; }
+  .xg-col-sm-2  { grid-column: span 2; }
+  .xg-col-sm-3  { grid-column: span 3; }
+  .xg-col-sm-4  { grid-column: span 4; }
+  .xg-col-sm-5  { grid-column: span 5; }
+  .xg-col-sm-6  { grid-column: span 6; }
+  .xg-col-sm-7  { grid-column: span 7; }
+  .xg-col-sm-8  { grid-column: span 8; }
+  .xg-col-sm-9  { grid-column: span 9; }
+  .xg-col-sm-10 { grid-column: span 10; }
+  .xg-col-sm-11 { grid-column: span 11; }
+  .xg-col-sm-12 { grid-column: span 12; }
+}
