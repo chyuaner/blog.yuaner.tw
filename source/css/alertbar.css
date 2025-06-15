@@ -1,0 +1,70 @@
+/* 共用 alert 風格 */
+.xg-alertbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.75em;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* 偽元素顯示 icon，預設樣式 */
+.xg-alertbar::before {
+  content: "ℹ️"; /* fallback icon */
+  font-size: 1.4em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.xg-alertbar p {
+  margin-block: 0; 
+}
+
+/* alert-warning */
+.xg-alertbar-warning {
+  background-color: #fff8e1;
+  border-color: #ffecb3;
+  color: #8a6d3b;
+}
+.xg-alertbar-warning::before {
+  content: "⚠️";
+}
+
+/* alert-error */
+.xg-alertbar-error {
+  background-color: #fdecea;
+  border-color: #f5c6cb;
+  color: #a94442;
+}
+.xg-alertbar-error::before {
+  content: "⛔";
+}
+
+/* alert-success */
+.xg-alertbar-success {
+  background-color: #e9f6ec;
+  border-color: #c3e6cb;
+  color: #3c763d;
+}
+.xg-alertbar-success::before {
+  content: "✅";
+}
+
+/* alert-info */
+.xg-alertbar-info {
+  background-color: #eef7fb;
+  border-color: #bee5eb;
+  color: #31708f;
+}
+.xg-alertbar-info::before {
+  content: "ℹ️";
+}

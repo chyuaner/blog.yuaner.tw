@@ -20,7 +20,7 @@ date: 2025-06-15 10:16:21
 ### 排版
 檔案：　[grid.css](/css/grid.css)
 
-```
+```markdown
 <div class="post-content">
 <div class="xg-grid">
 <div class="xg-col-8 xg-col-sm-12">
@@ -59,6 +59,26 @@ date: 2025-06-15 10:16:21
 
 </div>
 </div>
+</div>
+
+### alertbar
+```html
+<div class="xg-alertbar xg-alertbar-warning">
+    這次所有舊文章不會搬家到新系統去！
+</div>
+<div class="xg-alertbar xg-alertbar-info">
+
+**xg-alertbar-info** 樣式
+</div>
+```
+
+#### 預覽
+<div class="xg-alertbar xg-alertbar-warning">
+    這次所有舊文章不會搬家到新系統去！
+</div>
+<div class="xg-alertbar xg-alertbar-info">
+
+**xg-alertbar-info** 樣式
 </div>
 
 ## Echo Server
