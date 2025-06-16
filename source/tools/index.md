@@ -1,6 +1,7 @@
 ---
 title: 有架設的相關工具服務
 date: 2025-06-15 10:16:21
+toc: true
 ---
 
 ## 假圖產生器
@@ -19,6 +20,50 @@ date: 2025-06-15 10:16:21
 
 ### 排版
 檔案：　[grid.css](/css/grid.css)
+
+```markdown
+<div class="post-content">
+<div class="xg-grid">
+<div class="xg-col-8 xg-col-sm-12">
+
+左邊主文
+* 主文條列1
+* 主文條列2
+* 主文條列3
+
+</div>
+<div class="xg-col-4 xg-col-sm-12">
+
+右側放置處（可放圖片）
+![圖片放置處](https://fimg.yuaner.tw/300)
+
+</div>
+</div>
+</div>
+```
+
+#### 預覽
+<div class="post-content">
+<div class="xg-grid">
+<div class="xg-col-8 xg-col-sm-12">
+
+左邊主文
+* 主文條列1
+* 主文條列2
+* 主文條列3
+
+</div>
+<div class="xg-col-4 xg-col-sm-12">
+
+右側放置處（可放圖片）
+![圖片放置處](https://fimg.yuaner.tw/300)
+
+</div>
+</div>
+</div>
+
+### alertbar
+檔案：　[alertbar.css](/css/alertbar.css)
 
 額外使用render引擎：
 * markdown-it-attrs
