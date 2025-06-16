@@ -1,0 +1,96 @@
+/* Heimu Colors */
+/* 
+ * Heimu
+ * 
+ * 取自於: <https://dev.fandom.com/wiki/Heimu>
+ * 
+ * 額外有對Dark Mode模式與新增 <p></p> 標籤支援的需求有做小改動
+ * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
+ */
+:root {
+	--light-heimu-background-color: black;
+	--light-heimu-text-color: white;
+	--light-heimu-link-color: var(--theme-link-color);
+	--light-heimu-redlink-color: var(--theme-alert-color);
+	--dark-heimu-background-color: black;
+	--dark-heimu-text-color: white;
+	--dark-heimu-link-color: var(--theme-link-color);
+	--dark-heimu-redlink-color: var(--theme-alert-color);
+}
+
+p.heimu {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* Light Theme */
+p.heimu,
+span.heimu,
+span.heimu rt,
+span.heimu sub,
+span.heimu sup,
+span.heimu img {
+	background-color: var(--light-heimu-background-color);
+    filter: brightness(0);
+    transition: filter 0.125s linear;
+	color: var(--light-heimu-text-color);
+}
+span.heimu a,
+span.heimu a.extiw,
+span.heimu a.external,
+span.heimu a.mw-disambig,
+span.heimu a.mw-redirect {
+	color: var(--light-heimu-link-color);
+}
+span.heimu a.new {
+	color: var(--light-heimu-redlink-color);
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+	p.heimu,
+	span.heimu,
+	span.heimu rt,
+	span.heimu sub,
+	span.heimu sup,
+	span.heimu img {
+		background-color: var(--dark-heimu-background-color);
+		filter: brightness(0);
+		transition: filter 0.125s linear;
+		color: var(--dark-heimu-text-color);
+	}
+	span.heimu a,
+	span.heimu a.extiw,
+	span.heimu a.external,
+	span.heimu a.mw-disambig,
+	span.heimu a.mw-redirect {
+		color: var(--dark-heimu-link-color);
+	}
+	span.heimu a.new {
+		color: var(--dark-heimu-redlink-color);
+	}
+}
+
+/* Brightness Transition */
+/* .heimu-toggle is for HeimuToggle */
+p.heimu.heimu-toggled,
+span.heimu.heimu-toggled,
+span.heimu.heimu-toggled rt,
+span.heimu.heimu-toggled sub,
+span.heimu.heimu-toggled sup,
+span.heimu.heimu-toggled img,
+p.heimu:hover,
+span.heimu:hover,
+span.heimu:hover rt,
+span.heimu:hover sub,
+span.heimu:hover sup,
+span.heimu:hover img,
+a:hover p.heimu,
+a:hover span.heimu,
+a:hover span.heimu rt,
+a:hover span.heimu sub,
+a:hover span.heimu sup,
+a:hover span.heimu img {
+	filter: brightness(1);
+}

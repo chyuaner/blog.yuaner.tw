@@ -195,6 +195,7 @@ additional_injections:
   head: |
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/spoiler.css">
     <link rel="stylesheet" href="/css/alertbar.css">
   footer: ""
   after_footer: |

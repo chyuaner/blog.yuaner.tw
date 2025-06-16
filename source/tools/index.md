@@ -144,6 +144,18 @@ toc: true
 <!-- 有用到markdown-it-attrs，跑在p要素裡 -->
 這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
 
+### spoiler
+檔案：　[spoiler.css](/css/spoiler.css)
+
+### spoiler Heimu 黑幕
+* 取自於: <https://dev.fandom.com/wiki/Heimu>
+* 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
+* 額外有對Dark Mode模式與新增 <p></p> 標籤支援的需求有做小改動
+
+這段字是[防止被劇透的黑幕設計]{.heimu}測試
+
+直接做整段防止被劇透的黑幕設計測試 {.heimu}
+
 ## Echo Server
 ```
 curl -d "param1=value1&param2=value2" -X POST https://echo.yuaner.tw/send-data
