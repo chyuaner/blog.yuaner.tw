@@ -149,6 +149,11 @@ toc: true
 
 ### spoiler Heimu 黑幕
 * 取自於: <https://dev.fandom.com/wiki/Heimu>
+* Release status: Experimental
+* Description: Hide contents in spoiler bars and reveal the contents when the cursor is hovering over the spoiler bars
+* Author(s): HyperNervie
+* Scope: Site-wide
+* Updated: October 29, 2022
 * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
 * 額外有對Dark Mode模式與新增 <p></p> 標籤支援的需求有做小改動
 
