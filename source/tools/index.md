@@ -156,6 +156,20 @@ toc: true
 
 直接做整段防止被劇透的黑幕設計測試 {.heimu}
 
+### spoiler Blur 模糊
+* 取自於: <https://dev.fandom.com/wiki/SpoilerBlur>
+* Release status: Stable
+* Description: Blurs spoiler section or word(s)
+* Author(s): Sprye
+* Scope: Site-wide
+* Updated: July 20, 2024
+* 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
+* 額外有新增class語法糖 .hovers-blur ，比照萌娘百科
+
+這段字是[防止被劇透的模糊文字設計]{.hovers-blur}測試
+
+直接做整段防止被劇透的模糊文字設計測試 {.hovers-blur}
+
 ## Echo Server
 ```
 curl -d "param1=value1&param2=value2" -X POST https://echo.yuaner.tw/send-data

@@ -94,3 +94,49 @@ a:hover span.heimu sup,
 a:hover span.heimu img {
 	filter: brightness(1);
 }
+
+/* 
+ * SpoilerBlur
+ * 
+ * 取自於: <https://dev.fandom.com/wiki/SpoilerBlur>
+ * 
+ * Release status: Stable
+ * Description: Blurs spoiler section or word(s)
+ * Author(s): Sprye
+ * Scope: Site-wide
+ * Updated: July 20, 2024
+ * 
+ * 額外有新增class語法糖 .hovers-blur ，比照萌娘百科
+ * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
+ */
+ .spoilerblur, .hovers-blur {
+  filter: blur(3.5px);
+  opacity: 0.40;
+  transition: filter .50s linear, opacity .50s linear, text-shadow .50s linear;
+}
+
+.spoilerIMG, img.hovers-blur {
+  filter: blur(22.5px);
+  opacity: 0.20;
+  transition: filter .50s linear, opacity .50s linear, text-shadow .50s linear;
+}
+ 
+.spoilerblur:is(:hover, :focus, :focus-within, :active), .spoilerIMG:is(:hover, :focus, :focus-within, :active),
+.hovers-blur:is(:hover, :focus, :focus-within, :active), .spoilerIMG:is(:hover, :focus, :focus-within, :active)
+{ 
+  filter: blur(0px);
+  opacity: 1;
+  text-shadow: 0 0 0 transparent;
+  transition-delay: 0ms;
+}
+
+/* This part is candidate for complete removal, as it is not clear why it is
+   needed (see talk page of the documentation page). But for now it is just
+   excluded from affecting direct childs of <li> elements, since otherwise
+   it causes misaligning of the bullet or number.
+*/
+
+/* NEEDED: See https://community.fandom.com/f/p/4400000000003375796 */
+:not(li) > .spoilerblur, .spoilerIMG {
+	display: unset;
+}
