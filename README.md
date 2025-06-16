@@ -18,6 +18,12 @@
 * hexo-hide-posts
 * hexo-include-markdown
 * @fortawesome/fontawesome-free
+* ~~hexo-renderer-marked~~ (更換render引擎)
+* hexo-renderer-markdown-it
+    * markdown-it-anchor
+    * markdown-it-attrs
+    * markdown-it-bracketed-spans
+    * markdown-it-container
 
 ## 有額外調整的部分
 
