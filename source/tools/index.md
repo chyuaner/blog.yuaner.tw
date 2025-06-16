@@ -157,9 +157,29 @@ toc: true
 * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
 * 額外有對Dark Mode模式與新增 <p></p> 標籤支援的需求有做小改動
 
+### 寫法
+```markdown
 這段字是[防止被劇透的黑幕設計]{.heimu}測試
 
 直接做整段防止被劇透的黑幕設計測試 {.heimu}
+
+![圖片放置處](https://fimg.yuaner.tw/100) {.heimu}
+```
+
+### 預覽
+
+<div class="xg-grid">
+<div class="xg-col-9 xg-col-sm-12">
+
+這段字是[防止被劇透的黑幕設計]{.heimu}測試
+
+直接做整段防止被劇透的黑幕設計測試 {.heimu}
+</div>
+<div class="xg-col-3 xg-col-sm-12">
+
+![圖片放置處](https://fimg.yuaner.tw/100) {.heimu}
+</div>
+</div>
 
 ### spoiler Blur 模糊
 * 取自於: <https://dev.fandom.com/wiki/SpoilerBlur>
@@ -169,11 +189,29 @@ toc: true
 * Scope: Site-wide
 * Updated: July 20, 2024
 * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
-* 額外有新增class語法糖 .hovers-blur ，比照萌娘百科
+* 額外有新增class語法糖 .hovers-blur ，比照萌娘百科。並調整動畫時間成.50s，不延遲播放動畫。
+
+### 寫法
+```markdown
+這段字是[防止被劇透的模糊文字設計]{.hovers-blur}測試
+
+直接做整段防止被劇透的模糊文字設計測試 {.hovers-blur}
+
+![圖片放置處](https://fimg.yuaner.tw/100) {.hovers-blur}
+```
+
+<div class="xg-grid">
+<div class="xg-col-9 xg-col-sm-12">
 
 這段字是[防止被劇透的模糊文字設計]{.hovers-blur}測試
 
 直接做整段防止被劇透的模糊文字設計測試 {.hovers-blur}
+</div>
+<div class="xg-col-3 xg-col-sm-12">
+
+![圖片放置處](https://fimg.yuaner.tw/100) {.hovers-blur}
+</div>
+</div>
 
 ## Echo Server
 ```

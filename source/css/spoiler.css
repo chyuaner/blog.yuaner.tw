@@ -111,7 +111,7 @@ a:hover span.heimu img {
  * Scope: Site-wide
  * Updated: July 20, 2024
  * 
- * 額外有新增class語法糖 .hovers-blur ，比照萌娘百科
+ * 額外有新增class語法糖 .hovers-blur ，比照萌娘百科。並調整動畫時間成.50s，不延遲播放動畫。
  * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
  */
  .spoilerblur, .hovers-blur {
