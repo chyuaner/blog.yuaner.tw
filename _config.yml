@@ -124,6 +124,25 @@ feed:
   # icon: icon.png
   autodiscovery: true
 
+# hexo-renderer-markdown-it 引擎的相關設定
+markdown:
+  plugins:
+    - markdown-it-attrs
+    - markdown-it-anchor
+    - markdown-it-container
+  anchors:
+    level: 2
+    permalink: true
+    permalinkClass: headerlink
+    permalinkSymbol: ''
+    permalinkBefore: true
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: true
+    linkify: true
+    typographer: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

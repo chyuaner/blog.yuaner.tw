@@ -20,66 +20,84 @@ date: 2025-06-15 10:16:21
 ### 排版
 檔案：　[grid.css](/css/grid.css)
 
+額外使用render引擎：
+* markdown-it-attrs
+* markdown-it-container
+
+#### 原生HTML寫法
 ```markdown
-<div class="post-content">
-<div class="xg-grid">
-<div class="xg-col-8 xg-col-sm-12">
-
-左邊主文
-* 主文條列1
-* 主文條列2
-* 主文條列3
-
+<!-- 原生HTML寫法 -->
+<div class="xg-alertbar xg-alertbar-warning">
+    這是 <strong>.xg-alertbar-warning</strong> 樣式，原生HTML寫法
 </div>
-<div class="xg-col-4 xg-col-sm-12">
 
-右側放置處（可放圖片）
-![圖片放置處](https://fimg.yuaner.tw/300)
+<!-- 原生HTML混Markdown寫法 -->
+<div class="xg-alertbar xg-alertbar-info">
+<div>
 
-</div>
+這是 **xg-alertbar-info** 樣式，原生HTML混Markdown寫法
+
+* 並產生多行
+* 並產生多行
+* 並產生多行
 </div>
 </div>
 ```
 
-#### 預覽
-<div class="post-content">
-<div class="xg-grid">
-<div class="xg-col-8 xg-col-sm-12">
+#### Markdown引擎簡化寫法
+```markdown
+<!-- 使用div render寫法，有用到markdown-it-container -->
+::: xg-alertbar xg-alertbar-success
+這是 **xg-alertbar-success** 樣式，使用div render寫法，有用到markdown-it-container
+:::
 
-左邊主文
-* 主文條列1
-* 主文條列2
-* 主文條列3
+<!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
+::: xg-alertbar xg-alertbar-error
+這是 **xg-alertbar-error** 樣式，原生HTML混Markdown寫法
 
-</div>
-<div class="xg-col-4 xg-col-sm-12">
+* 並產生多行
+* 並產生多行
+* 並產生多行
+:::
 
-右側放置處（可放圖片）
-![圖片放置處](https://fimg.yuaner.tw/300)
-
-</div>
-</div>
-</div>
-
-### alertbar
-```html
-<div class="xg-alertbar xg-alertbar-warning">
-    這次所有舊文章不會搬家到新系統去！
-</div>
-<div class="xg-alertbar xg-alertbar-info">
-
-**xg-alertbar-info** 樣式
-</div>
+<!-- 有用到markdown-it-attrs，跑在p要素裡 -->
+這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
 ```
 
 #### 預覽
+<!-- 原生HTML寫法 -->
 <div class="xg-alertbar xg-alertbar-warning">
-    這次所有舊文章不會搬家到新系統去！
+    這是 <strong>.xg-alertbar-warning</strong> 樣式，原生HTML寫法
 </div>
-<div class="xg-alertbar xg-alertbar-info">
 
-**xg-alertbar-info** 樣式
+<!-- 原生HTML混Markdown寫法 -->
+<div class="xg-alertbar xg-alertbar-info">
+<div>
+
+這是 **xg-alertbar-info** 樣式，原生HTML混Markdown寫法
+
+* 並產生多行
+* 並產生多行
+* 並產生多行
 </div>
+</div>
+
+<!-- 使用div render寫法，有用到markdown-it-container -->
+::: xg-alertbar xg-alertbar-success
+這是 **xg-alertbar-success** 樣式，使用div render寫法，有用到markdown-it-container
+:::
+
+<!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
+::: xg-alertbar xg-alertbar-error
+這是 **xg-alertbar-error** 樣式，原生HTML混Markdown寫法
+
+* 並產生多行
+* 並產生多行
+* 並產生多行
+:::
+
+<!-- 有用到markdown-it-attrs，跑在p要素裡 -->
+這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
 
 ## Echo Server
 ```

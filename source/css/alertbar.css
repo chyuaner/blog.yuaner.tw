@@ -1,8 +1,6 @@
 /* 共用 alert 風格 */
 .xg-alertbar {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
+  display: flex;
   gap: 0.75em;
   padding: 1em;
   margin: 1em 0;
@@ -12,21 +10,43 @@
   font-size: 0.95rem;
   line-height: 1.6;
   position: relative;
+  align-items: flex-start;
 }
 
-/* 偽元素顯示 icon，預設樣式 */
+/* 偽元素圖示 */
 .xg-alertbar::before {
-  content: "ℹ️"; /* fallback icon */
+  content: "ℹ️";
   font-size: 1.4em;
   line-height: 1;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  margin-top: 0.15em;
 }
 
+/* ✅ 把除了 ::before 的所有直接子元素通通包進去 */
+.xg-alertbar > *:not(:first-child) {
+  flex-basis: 100%;
+}
+
+.xg-alertbar div {
+  margin: 0; 
+}
 .xg-alertbar p {
-  margin-block: 0; 
+  margin-block: 0;
+}
+
+.xg-alertbar h1, 
+.xg-alertbar h2, 
+.xg-alertbar h3, 
+.xg-alertbar h4, 
+.xg-alertbar h5, 
+.xg-alertbar h6, 
+.xg-alertbar ol, 
+.xg-alertbar ul, 
+.xg-alertbar p {
+  color: inherit;
 }
 
 /* alert-warning */
