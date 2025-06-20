@@ -159,11 +159,11 @@ export default {
 整個弄好之後，就可以測試看看舊網址有沒有成功301導轉到舊站新網址去。
 
 我這邊用了以下幾個網址來綜合測試：
-* <http://blog.yuaner.tw/2012/11/firefox%E5%B0%87%E5%88%86%E9%A0%81%E5%88%97%E7%A7%BB%E5%88%B0%E7%B6%B2%E5%9D%80%E4%B8%8B%E6%96%B9/> （被分享到mobile01論壇的）
-* <https://blog.yuaner.tw/life/taobao-refund/> （被分享到FB淘寶人社團的）
-* <https://blog.yuaner.tw/2011/09/> （舊站彙整頁面）
-* <https://blog.yuaner.tw/archives/2025/06> （新站彙整頁面）
-* <https://blog.yuaner.tw/tag/linux/> （舊站Tag頁面）
-* <https://blog.yuaner.tw/tags/linux/> （新站Tag頁面）
+* <http://blog.yuaner.tw/2012/11/firefox%E5%B0%87%E5%88%86%E9%A0%81%E5%88%97%E7%A7%BB%E5%88%B0%E7%B6%B2%E5%9D%80%E4%B8%8B%E6%96%B9/>{data-pjax="false"} （被分享到mobile01論壇的）
+* <https://blog.yuaner.tw/life/taobao-refund/>{data-pjax="false"} （被分享到FB淘寶人社團的）
+* <https://blog.yuaner.tw/2011/09/>{data-pjax="false"} （舊站彙整頁面）
+* <https://blog.yuaner.tw/archives/2025/06>{data-pjax="false"} （新站彙整頁面）
+* <https://blog.yuaner.tw/tag/linux/>{data-pjax="false"} （舊站Tag頁面）
+* <https://blog.yuaner.tw/tags/linux/>{data-pjax="false"} （新站Tag頁面）
 
 這樣就可以兼顧新系統用主網址，同時又繼續讓舊系統舊網址完美相容了！！
