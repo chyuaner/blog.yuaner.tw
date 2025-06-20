@@ -1,3 +1,6 @@
 [submodule "themes/kratos-rebirth"]
 	path = themes/kratos-rebirth
 	url = git@github.com:chyuaner/Kratos-Rebirth.git
+[submodule "external/hexo-generator-calendar"]
+	path = external/hexo-generator-calendar
+	url = git@github.com:chyuaner/hexo-generator-calendar.git

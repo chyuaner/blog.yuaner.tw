@@ -144,6 +144,10 @@ markdown:
     linkify: true
     typographer: true
 
+calendar:
+  single: false
+  root: calendar/
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
