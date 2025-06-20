@@ -1,5 +1,5 @@
 ---
-title: Cloudflare Worker 讓這個主網址共用新舊站，透過舊網址名單，導向到新域名
+title: Cloudflare Worker 主域名共用新舊站，透過舊網址名單，有條件的導向到新域名
 categories:
   - 架站相關
 tags:
