@@ -42,7 +42,7 @@ nav:
     #     - label: 项目文档
     #       icon: book
     #       url: https://wiki.krt.moe
-    - label: 相關工具
+    - label: 寫文用相關工具
       icon: <i class="fa-solid fa-toolbox"></i>
       url: /tools/
     - label: 關於本站

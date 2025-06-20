@@ -1,24 +1,45 @@
 ---
-title: 有架設的相關工具服務
+title: 在新部落格寫文用的相關工具
 date: 2025-06-15 10:16:21
 toc: true
 ---
 
 ## 假圖產生器
-### 基本用法
-* `<img src="https://fimg.yuaner.tw/300/">`
-* `<img src="https://fimg.yuaner.tw/250x100/">`
-* `<img src="https://fimg.yuaner.tw/250x100/ff0000/">`
-* `<img src="https://fimg.yuaner.tw/350x200/ff0000/000">`
-* `<img src="https://fimg.yuaner.tw/350x200/ff0000,128/000,255">`
-* `<img src="https://fimg.yuaner.tw/350x200/?text=Hello">`
-* `<img src="https://fimg.yuaner.tw/200x100/?retina=1&text=こんにちは&font=noto">`
-* `<img src="https://fimg.yuaner.tw/350x200/?text=World&font=lobster">`
+### 預留用圖片網址
+* https://fimg.yuaner.tw/300/
+* https://fimg.yuaner.tw/250x100/
+* https://fimg.yuaner.tw/250x100/ff0000/
+* https://fimg.yuaner.tw/350x200/ff0000/000
+* https://fimg.yuaner.tw/350x200/ff0000,128/000,255
+* https://fimg.yuaner.tw/350x200/?text=Hello
+* https://fimg.yuaner.tw/200x100/?retina=1&text=こんにちは&font=noto
+* https://fimg.yuaner.tw/350x200/?text=World&font=lobster
 
 ## 本站CSS相關
 以下內容已經整理過，可獨立使用，不依賴theme提供的功能。
 
 ### 排版
+#### 預覽
+<div class="post-content">
+<div class="xg-grid">
+<div class="xg-col-8 xg-col-sm-12">
+
+左邊主文
+* 主文條列1
+* 主文條列2
+* 主文條列3
+
+</div>
+<div class="xg-col-4 xg-col-sm-12">
+
+右側放置處（可放圖片）
+![圖片放置處](https://fimg.yuaner.tw/300)
+
+</div>
+</div>
+</div>
+
+#### 用法說明
 檔案：　[grid.css](/css/grid.css)
 
 ```markdown
@@ -42,27 +63,43 @@ toc: true
 </div>
 ```
 
-#### 預覽
-<div class="post-content">
-<div class="xg-grid">
-<div class="xg-col-8 xg-col-sm-12">
-
-左邊主文
-* 主文條列1
-* 主文條列2
-* 主文條列3
-
-</div>
-<div class="xg-col-4 xg-col-sm-12">
-
-右側放置處（可放圖片）
-![圖片放置處](https://fimg.yuaner.tw/300)
-
-</div>
-</div>
-</div>
-
 ### alertbar
+#### 預覽
+<!-- 原生HTML寫法 -->
+<div class="xg-alertbar xg-alertbar-warning">
+    這是 <strong>.xg-alertbar-warning</strong> 樣式，原生HTML寫法
+</div>
+
+<!-- 原生HTML混Markdown寫法 -->
+<div class="xg-alertbar xg-alertbar-info">
+<div>
+
+這是 **xg-alertbar-info** 樣式，原生HTML混Markdown寫法
+
+* 並產生多行
+* 並產生多行
+* 並產生多行
+</div>
+</div>
+
+<!-- 使用div render寫法，有用到markdown-it-container -->
+::: xg-alertbar xg-alertbar-success
+這是 **xg-alertbar-success** 樣式，使用div render寫法，有用到markdown-it-container
+:::
+
+<!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
+::: xg-alertbar xg-alertbar-error
+這是 **xg-alertbar-error** 樣式，原生HTML混Markdown寫法
+
+* 並產生多行
+* 並產生多行
+* 並產生多行
+:::
+
+<!-- 有用到markdown-it-attrs，跑在p要素裡 -->
+這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
+
+#### 用法說明
 檔案：　[alertbar.css](/css/alertbar.css)
 
 額外使用render引擎：
@@ -109,45 +146,10 @@ toc: true
 這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
 ```
 
-#### 預覽
-<!-- 原生HTML寫法 -->
-<div class="xg-alertbar xg-alertbar-warning">
-    這是 <strong>.xg-alertbar-warning</strong> 樣式，原生HTML寫法
-</div>
-
-<!-- 原生HTML混Markdown寫法 -->
-<div class="xg-alertbar xg-alertbar-info">
-<div>
-
-這是 **xg-alertbar-info** 樣式，原生HTML混Markdown寫法
-
-* 並產生多行
-* 並產生多行
-* 並產生多行
-</div>
-</div>
-
-<!-- 使用div render寫法，有用到markdown-it-container -->
-::: xg-alertbar xg-alertbar-success
-這是 **xg-alertbar-success** 樣式，使用div render寫法，有用到markdown-it-container
-:::
-
-<!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
-::: xg-alertbar xg-alertbar-error
-這是 **xg-alertbar-error** 樣式，原生HTML混Markdown寫法
-
-* 並產生多行
-* 並產生多行
-* 並產生多行
-:::
-
-<!-- 有用到markdown-it-attrs，跑在p要素裡 -->
-這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
-
-### spoiler
+### 仿造萌娘百科用的防劇透格式
 檔案：　[spoiler.css](/css/spoiler.css)
 
-### spoiler Heimu 黑幕
+#### spoiler Heimu 黑幕
 * 取自於: <https://dev.fandom.com/wiki/Heimu>
 * Release status: Experimental
 * Description: Hide contents in spoiler bars and reveal the contents when the cursor is hovering over the spoiler bars
@@ -157,16 +159,7 @@ toc: true
 * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
 * 額外有對Dark Mode模式與新增 <p></p> 標籤支援的需求有做小改動
 
-### 寫法
-```markdown
-這段字是[防止被劇透的黑幕設計]{.heimu}測試
-
-直接做整段防止被劇透的黑幕設計測試 {.heimu}
-
-![圖片放置處](https://fimg.yuaner.tw/100) {.heimu}
-```
-
-### 預覽
+##### 預覽
 
 <div class="xg-grid">
 <div class="xg-col-9 xg-col-sm-12">
@@ -181,7 +174,16 @@ toc: true
 </div>
 </div>
 
-### spoiler Blur 模糊
+##### 寫法
+```markdown
+這段字是[防止被劇透的黑幕設計]{.heimu}測試
+
+直接做整段防止被劇透的黑幕設計測試 {.heimu}
+
+![圖片放置處](https://fimg.yuaner.tw/100) {.heimu}
+```
+
+#### spoiler Blur 模糊
 * 取自於: <https://dev.fandom.com/wiki/SpoilerBlur>
 * Release status: Stable
 * Description: Blurs spoiler section or word(s)
@@ -191,15 +193,7 @@ toc: true
 * 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
 * 額外有新增class語法糖 .hovers-blur ，比照萌娘百科。並調整動畫時間成.50s，不延遲播放動畫。
 
-### 寫法
-```markdown
-這段字是[防止被劇透的模糊文字設計]{.hovers-blur}測試
-
-直接做整段防止被劇透的模糊文字設計測試 {.hovers-blur}
-
-![圖片放置處](https://fimg.yuaner.tw/100) {.hovers-blur}
-```
-
+##### 預覽
 <div class="xg-grid">
 <div class="xg-col-9 xg-col-sm-12">
 
@@ -212,6 +206,15 @@ toc: true
 ![圖片放置處](https://fimg.yuaner.tw/100) {.hovers-blur}
 </div>
 </div>
+
+##### 寫法
+```markdown
+這段字是[防止被劇透的模糊文字設計]{.hovers-blur}測試
+
+直接做整段防止被劇透的模糊文字設計測試 {.hovers-blur}
+
+![圖片放置處](https://fimg.yuaner.tw/100) {.hovers-blur}
+```
 
 ## Echo Server
 ```
