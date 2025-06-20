@@ -92,7 +92,17 @@ getDatabase, ref, get, set, child,
 
     // 載入＆pjax 重新掛載
     window.loadComments = loadComments;
+    // 處理Matomo追蹤更新
+    _paq.push(['setCustomUrl', window.location.href]);
+    _paq.push(['setDocumentTitle', document.title]);
+    _paq.push(['trackPageView']);
     window.addEventListener('pjax:success', () => {
         window.loadComments = loadComments;
+    });
+    window.addEventListener('pjax:complete', () => {
+        // 處理Matomo追蹤更新
+        _paq.push(['setCustomUrl', window.location.href]);
+        _paq.push(['setDocumentTitle', document.title]);
+        _paq.push(['trackPageView']);
     });
 })();
