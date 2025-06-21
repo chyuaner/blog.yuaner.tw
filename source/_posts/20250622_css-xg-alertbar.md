@@ -84,7 +84,7 @@ date: 2025-06-22 02:31:46
 </div>
 ```
 
-## 以markdown-it-attrs
+## 以markdown-it-attrs的方式使用
 優點：
 * 可讀性最好，接近習慣的Markdown語法，以原始的Markdown語法再功能擴充
 * 相容性次要好
@@ -124,7 +124,7 @@ markdown:
     typographer: true
 ```
 
-## 以markdown-it-container
+## 以markdown-it-container的方式使用
 優點：
 * 可讀性最好，格式是自己定義的
 * 可以處理多行內容，能處理的功能需求較多
