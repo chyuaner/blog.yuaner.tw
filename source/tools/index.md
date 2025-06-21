@@ -7,13 +7,22 @@ toc: true
 基本上都是以Markdown為主，相關定義class之類的attribute，都是用Markdown擴充語法
 
 ### Cover封面圖
+<div class="xg-grid">
+<div class="xg-col-5 xg-col-sm-12">
+
+![圖片放置處](https://fimg.yuaner.tw/1200x725)
+</div>
+<div class="xg-col-7 xg-col-sm-12">
+
 **1200x725** 應該是最佳考量！！
 
 * 本theme文章列表封面原始尺寸: 240x145
 * Facebook摘文最佳尺寸：1200x630
+</div>
+</div>
 
-## 假圖產生器
-### 預留用圖片網址
+
+## 預留用圖片網址
 * https://fimg.yuaner.tw/300/
 * https://fimg.yuaner.tw/250x100/
 * https://fimg.yuaner.tw/250x100/ff0000/
