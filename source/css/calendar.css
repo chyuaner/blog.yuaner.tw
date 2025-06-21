@@ -81,7 +81,7 @@
 }
 
 .cal tbody a {
-  background-color: #f76b61;
+  background-color: #e0e0e0aa;
   color: white;
   display: block;
   font-weight: 700;
@@ -89,8 +89,8 @@
 }
 
 .cal tbody .cal-today {
-  background-color: #ffdfdd;
-  color: #f76b61;
+  background-color: #8ec5fc;
+  color: #fffd;
 }
 
 .cal .cal-gray {
