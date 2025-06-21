@@ -5,7 +5,8 @@
 ===
 
 ## 本站寫文風格
-基本上都是以Markdown為主，相關定義class之類的attribute，都是用Markdown擴充語法
+* 基本上都是以Markdown為主，相關定義class之類的attribute，都是用Markdown擴充語法。
+* 盡量不要使用 hexo 專有語法： `{% link text url [external] [title] %}`、`{% post_link slug [title] %}` 這類的，會導致之後若要換系統搬移文章的話，會衍生需要額外自行撰寫解析器的麻煩。
 
 ### Cover封面圖
 **1200x725** 應該是最佳考量！！
