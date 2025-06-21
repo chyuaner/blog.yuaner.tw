@@ -89,7 +89,7 @@ toc: true
 
 <!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
 ::: xg-alertbar xg-alertbar-error
-這是 **xg-alertbar-error** 樣式，原生HTML混Markdown寫法
+這是 **xg-alertbar-error** 樣式，使用div render寫法，有用到markdown-it-container
 
 * 並產生多行
 * 並產生多行
@@ -135,7 +135,7 @@ toc: true
 
 <!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
 ::: xg-alertbar xg-alertbar-error
-這是 **xg-alertbar-error** 樣式，原生HTML混Markdown寫法
+這是 **xg-alertbar-error** 樣式，使用div render寫法，有用到markdown-it-container
 
 * 並產生多行
 * 並產生多行
