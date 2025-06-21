@@ -63,8 +63,9 @@ toc: true
 </div>
 ```
 
-### alertbar
-#### 預覽
+### AlertBar
+詳細介紹文： [CSS為你的網站文章添加 AlertBar](/2025/06/css-xg-alertbar)
+
 <!-- 原生HTML寫法 -->
 <div class="xg-alertbar xg-alertbar-warning">
     這是 <strong>.xg-alertbar-warning</strong> 樣式，原生HTML寫法
@@ -99,41 +100,15 @@ toc: true
 <!-- 有用到markdown-it-attrs，跑在p要素裡 -->
 這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
 
-#### 用法說明
-檔案：　[alertbar.css](/css/alertbar.css)
-
-額外使用render引擎：
-* markdown-it-attrs
-* markdown-it-container
-
-#### 原生HTML寫法
+#### 本站寫法
 ```markdown
-<!-- 原生HTML寫法 -->
-<div class="xg-alertbar xg-alertbar-warning">
-    這是 <strong>.xg-alertbar-warning</strong> 樣式，原生HTML寫法
-</div>
+> 這是 **xg-alertbar-success** 樣式，使用markdown-it-attrs，跑在&lt;blockquote&gt;要素
+{.xg-alertbar .xg-alertbar-success}
 
-<!-- 原生HTML混Markdown寫法 -->
-<div class="xg-alertbar xg-alertbar-info">
-<div>
-
-這是 **xg-alertbar-info** 樣式，原生HTML混Markdown寫法
-
-* 並產生多行
-* 並產生多行
-* 並產生多行
-</div>
-</div>
-```
-
-#### Markdown引擎簡化寫法
-```markdown
-<!-- 使用div render寫法，有用到markdown-it-container -->
 ::: xg-alertbar xg-alertbar-success
 這是 **xg-alertbar-success** 樣式，使用div render寫法，有用到markdown-it-container
 :::
 
-<!-- 使用div render寫法，有用到markdown-it-container，多行多要素 -->
 ::: xg-alertbar xg-alertbar-error
 這是 **xg-alertbar-error** 樣式，使用div render寫法，有用到markdown-it-container
 
@@ -142,7 +117,6 @@ toc: true
 * 並產生多行
 :::
 
-<!-- 有用到markdown-it-attrs，跑在p要素裡 -->
 這是 **xg-alertbar-info** 樣式，有用到markdown-it-attrs，跑在&lt;p&gt;要素裡 {.xg-alertbar .xg-alertbar-info}
 ```
 
