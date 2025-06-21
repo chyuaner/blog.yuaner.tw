@@ -4,6 +4,15 @@
 新部落格主站
 ===
 
+## 本站寫文風格
+基本上都是以Markdown為主，相關定義class之類的attribute，都是用Markdown擴充語法
+
+### Cover封面圖
+**1200x725** 應該是最佳考量！！
+
+* 本theme文章列表封面原始尺寸： 240x145
+* Facebook摘文最佳尺寸： 1200x630
+
 ## 本站有使用的素材
 ### 背景
 * <a href='https://zh.pngtree.com/freebackground/light-snow-landscape-train-illustration-background_967224.html'>免費的背景照片來自 zh.pngtree.com/</a>
