@@ -8,6 +8,10 @@ tags:
   - hexo
 toc: true
 date: 2025-06-22 02:31:46
+show_copyright: true
+copyright_notice_template:
+  本篇主文依據 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA 4.0 姓名標示-相同方式分享</a> 授權釋出。 
+  <br>alertbar.css程式碼 由ChatGPT工具生成，將其以 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant">CC0 1.0</a> 公領域方式釋出。
 ---
 
 

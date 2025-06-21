@@ -9,6 +9,10 @@ tags:
 toc: true
 date: 2025-06-20 13:00:36
 cover: cover.png
+show_copyright: true
+copyright_notice_template:
+  本篇教學主文依據 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA 4.0 姓名標示-相同方式分享</a> 授權釋出。 
+  <br>內文提到的Cloudflare Worker腳本是由ChatGPT工具生成，將其以 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant">CC0 1.0</a> 公領域方式釋出。
 ---
 
 ## 新舊站的網址規劃
