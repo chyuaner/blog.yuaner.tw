@@ -147,19 +147,9 @@ toc: true
 ```
 
 ### 仿造萌娘百科用的防劇透格式
-檔案：　[spoiler.css](/css/spoiler.css)
+詳細介紹文： [CSS為你的網站文章添加防劇透用的黑幕、模糊效果](/2025/06/css-heimu)
 
 #### spoiler Heimu 黑幕
-* 取自於: <https://dev.fandom.com/wiki/Heimu>
-* Release status: Experimental
-* Description: Hide contents in spoiler bars and reveal the contents when the cursor is hovering over the spoiler bars
-* Author(s): HyperNervie
-* Scope: Site-wide
-* Updated: October 29, 2022
-* 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
-* 額外有對Dark Mode模式與新增 <p></p> 標籤支援的需求有做小改動
-
-##### 預覽
 
 <div class="xg-grid">
 <div class="xg-col-9 xg-col-sm-12">
@@ -174,7 +164,7 @@ toc: true
 </div>
 </div>
 
-##### 寫法
+##### 本站寫法
 ```markdown
 這段字是[防止被劇透的黑幕設計]{.heimu}測試
 
@@ -184,16 +174,7 @@ toc: true
 ```
 
 #### spoiler Blur 模糊
-* 取自於: <https://dev.fandom.com/wiki/SpoilerBlur>
-* Release status: Stable
-* Description: Blurs spoiler section or word(s)
-* Author(s): Sprye
-* Scope: Site-wide
-* Updated: July 20, 2024
-* 此部份授權：Community content is available under CC-BY-SA unless otherwise noted.
-* 額外有新增class語法糖 .hovers-blur ，比照萌娘百科。並調整動畫時間成.50s，不延遲播放動畫。
 
-##### 預覽
 <div class="xg-grid">
 <div class="xg-col-9 xg-col-sm-12">
 
@@ -207,7 +188,7 @@ toc: true
 </div>
 </div>
 
-##### 寫法
+##### 本站寫法
 ```markdown
 這段字是[防止被劇透的模糊文字設計]{.hovers-blur}測試
 
