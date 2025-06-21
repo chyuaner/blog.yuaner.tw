@@ -198,6 +198,7 @@ additional_injections:
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/spoiler.css">
     <link rel="stylesheet" href="/css/alertbar.css">
+    <link rel="stylesheet" href="/css/calendar.css">
   footer: ""
   after_footer: |
     <!-- Matomo -->
