@@ -215,4 +215,4 @@ additional_injections:
     </script>
     <!-- End Matomo Code -->
     
-    <script type="module" src="/comments/giscus.js"></script>
+    <script type="module" src="/js/giscus.js"></script>
