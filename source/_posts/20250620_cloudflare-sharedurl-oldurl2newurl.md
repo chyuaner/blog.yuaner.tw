@@ -8,9 +8,8 @@ tags:
   - Cloudflare Worker
 toc: true
 date: 2025-06-20 13:00:36
-cover:
+cover: cover.png
 ---
-
 
 ## 新舊站的網址規劃
 主要部落格主網址就是用 blog.yuaner.tw
