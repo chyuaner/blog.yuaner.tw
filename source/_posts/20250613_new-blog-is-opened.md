@@ -19,7 +19,7 @@ tags:
 
 <div class="post-content">
 <div class="xg-grid">
-<div class="xg-col-8 xg-col-sm-12">
+<div class="xg-col-7 xg-col-sm-12">
 
 而且不只精美的「彙整」斷層，連「草稿」狀態的文章都累積多少篇，而且都是已經完全放置到忘掉的😅
 
@@ -29,9 +29,12 @@ tags:
 所以想說這次乾脆重弄部落格，這次以簡單、順手為主，而且重點是能以最順手的Markdown習慣就可以直接產生出完整的一篇，不要再讓我在浪費心力調排版、Debug在文章之外的問題。
 
 </div>
-<div class="xg-col-4 xg-col-sm-12">
+<div class="xg-col-5 xg-col-sm-12">
 
-<img src="Screenshot2025-06-13at23-52-17.png" />
+<figure>
+  <img src="Screenshot2025-06-13at23-52-17.png" />
+  <figcaption>瞧！這個斷層有多大啊</figcaption>
+</figure>
 
 </div>
 </div>
