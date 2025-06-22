@@ -111,6 +111,7 @@ sidebar:
     - category
     - tagcloud
     - posts
+    - comments
 
 # 分享组件设置
 share:

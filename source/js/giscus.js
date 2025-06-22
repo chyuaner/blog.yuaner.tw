@@ -93,12 +93,35 @@ getDatabase, ref, get, set, child,
     // ✅ 加上留言數列表更新
     const updateCommentCounts = async () => {
         const GIST_URL = "https://gist.githubusercontent.com/chyuaner/a06a4eeae2d3013b7796ee96c73ff2ee/raw/blog-comments.json";
+        const commentsWidget = document.querySelector('#krw-comments .list-group');
 
         try {
             const res = await fetch(GIST_URL);
             const data = await res.json();
             const counts = data.counts;
 
+            if (commentsWidget) {
+                const latest = data.latest || [];
+                // 清空舊內容
+                commentsWidget.innerHTML = '';
+
+                latest.slice(0, 5).forEach(item => {
+                    const li = document.createElement('a');
+                    li.className = 'list-group-item';
+                    li.href = item.post;
+                    li.title = item.body; // 滑鼠提示顯示留言內文
+
+                    // const date = new Date(item.createdAt);
+                    // const dateStr = date.toLocaleDateString();
+                    // const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    li.innerHTML = `<i class="fa fa-comment"></i> ${item.author}：${item.body.substring(0, 20)}…`;
+                    // li.innerHTML = `<i class="fa fa-comment"></i> <strong>${item.author}</strong>：${item.body.substring(0, 20)}…
+                    //                 <br><small>${dateStr} ${timeStr}</small>`;
+                    commentsWidget.appendChild(li);
+                });
+            }
+
+            // 在文章列表顯示該文章留言數量
             document.querySelectorAll("article.kratos-hentry").forEach(article => {
             const link = article.querySelector("a[href*='/20']"); // 文章連結
             if (!link) return;
