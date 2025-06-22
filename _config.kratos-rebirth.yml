@@ -42,7 +42,7 @@ nav:
     #     - label: 项目文档
     #       icon: book
     #       url: https://wiki.krt.moe
-    - label: 寫文用相關工具
+    - label: 寫文工具
       icon: <i class="fa-solid fa-toolbox"></i>
       url: /tools/
     - label: 關於本站
@@ -54,7 +54,7 @@ nav:
     - label: 搜尋
       icon: search
       url: /search/
-    - label: 部落格舊站
+    - label: 舊站
       float_right: true
       icon: <i class="fa-solid fa-right-to-bracket"></i>
       url: https://blog-legacy.yuaner.tw
