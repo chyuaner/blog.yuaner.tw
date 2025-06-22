@@ -111,12 +111,15 @@ getDatabase, ref, get, set, child,
                     li.href = item.post;
                     li.title = item.body; // 滑鼠提示顯示留言內文
 
-                    // const date = new Date(item.createdAt);
+                    const date = new Date(item.createdAt);
                     // const dateStr = date.toLocaleDateString();
-                    // const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                    li.innerHTML = `<i class="fa fa-comment"></i> ${item.author}：${item.body.substring(0, 20)}…`;
-                    // li.innerHTML = `<i class="fa fa-comment"></i> <strong>${item.author}</strong>：${item.body.substring(0, 20)}…
-                    //                 <br><small>${dateStr} ${timeStr}</small>`;
+                    const dateStr = date.getFullYear() + '-' +
+                                    String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                                    String(date.getDate()).padStart(2, '0');
+                    const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    // li.innerHTML = `<i class="fa fa-comment"></i> ${item.author}：${item.body.substring(0, 20)}…`;
+                    li.innerHTML = `<i class="fa fa-comment"></i> <strong>${item.author}</strong>：${item.body.substring(0, 20)}…
+                                    <br><small>${dateStr} ${timeStr}</small>`;
                     commentsWidget.appendChild(li);
                 });
             }
