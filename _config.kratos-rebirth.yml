@@ -55,6 +55,7 @@ nav:
       icon: search
       url: /search/
     - label: 部落格舊站
+      float_right: true
       icon: <i class="fa-solid fa-right-to-bracket"></i>
       url: https://blog-legacy.yuaner.tw
 
