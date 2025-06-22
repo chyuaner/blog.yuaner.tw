@@ -25,4 +25,4 @@ jobs:
         run: npm install node-fetch@2
 
       - name: Run fetch-comments.js
-        run: node scripts/fetch-comments.js
+        run: node tools/fetch-comments.js
