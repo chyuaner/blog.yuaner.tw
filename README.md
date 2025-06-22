@@ -21,6 +21,18 @@
 * <https://free-paper-texture.com/green-wood-chips-paper/>
 * <https://free-paper-texture.com/black-wood-chips-texture/>
 
+## repo的檔案結構
+原則上以原始hexo檔案結構為主，不過根據需求，有擴增一些資料夾：
+
+* external: 有自行修改過的npm套件，以git submodule的形式，配合package.json連結進來
+* scripts: hexo處理時需要依賴的JS檔
+* tools: 不給hexo處理，但需要額外給外部工具用js執行腳本
+* themes: 本站用的主題，因為也有自行改過，故以git submodule的形式拉進來。
+* source/assets: 自行調整的網站佈景需要用到的圖片資源都放這
+* source/js/giscus.js: 雖然名義上是處理留言系統，但因為有綁定pjax載入邏輯很難拆開，故所有需要換頁功能要做的事情都塞在這份裡面。
+* source/fontawesome: 雖然是從npm安裝，但是為了給全站讀到要用的檔案，有囮外用腳本自動複製到這邊，並設定gitignore
+
+其他應該都是hexo原始結構與kratos-rebirth衍生的設定結構，可從官方教學對照。
 
 ## 有額外安裝的Plugin
 * hexo-generator-feed
