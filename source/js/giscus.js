@@ -90,8 +90,37 @@ getDatabase, ref, get, set, child,
         }
     };
 
+    // ✅ 加上留言數列表更新
+    const updateCommentCounts = async () => {
+        const GIST_URL = "https://gist.githubusercontent.com/chyuaner/a06a4eeae2d3013b7796ee96c73ff2ee/raw/blog-comments.json";
+
+        try {
+            const res = await fetch(GIST_URL);
+            const data = await res.json();
+            const counts = data.counts;
+
+            document.querySelectorAll("article.kratos-hentry").forEach(article => {
+            const link = article.querySelector("a[href*='/20']"); // 文章連結
+            if (!link) return;
+
+            const pathname = new URL(link.href, location.origin).pathname;
+            const normalizedPath = pathname.endsWith('/') ? pathname : pathname + '/';
+            const count = counts[normalizedPath] || counts[pathname] || 0;
+
+            const span = article.querySelector(".giscus_count");
+            if (span) {
+                span.textContent = count;
+                span.title = `${count} 則留言`;
+            }
+            });
+        } catch (err) {
+            console.warn("留言數讀取失敗：", err);
+        }
+    };
+
     // 載入＆pjax 重新掛載
     window.loadComments = loadComments;
+    updateCommentCounts();
     // 處理Matomo追蹤更新
     _paq.push(['setCustomUrl', window.location.href]);
     _paq.push(['setDocumentTitle', document.title]);
@@ -106,5 +135,6 @@ getDatabase, ref, get, set, child,
         _paq.push(['setDocumentTitle', document.title]);
         _paq.push(['trackPageView']);
         initCalendarWidget()
+        updateCommentCounts();
     });
 })();

@@ -175,11 +175,11 @@ comments:
       page: ""
   count:
     enable_at: 
-    # - index
+    - index
     - post
     template:
       _shared: ""
-      index: ""
+      index: "<span class='giscus_count'>?</span>"
       post: "<span id='giscus_count'>?</span>"
 
 # 访问数量统计
