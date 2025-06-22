@@ -17,7 +17,6 @@ async function fetchDiscussions() {
           nodes {
             title
             url
-            totalCommentCount
             comments(last: ${COMMENTS_PER_DISCUSSION}) {
               totalCount
               nodes {
@@ -73,8 +72,7 @@ async function buildCommentData() {
   discussions.forEach(d => {
     // const postPath = extractPathFromUrl(d.url);
     const postPath = extractPathFromDiscussion(d);
-    // counts[postPath] = d.comments.totalCount; // 主留言數
-    counts[postPath] = d.totalCommentCount; // 留言 + 巢狀留言 整體數量
+    counts[postPath] = d.comments.totalCount;
 
     d.comments.nodes.forEach(c => {
       allComments.push({
