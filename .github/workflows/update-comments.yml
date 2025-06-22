@@ -1,0 +1,28 @@
+name: Update Giscus Comment Count
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 每小時
+  workflow_dispatch:     # 手動觸發也支援
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GIST_ID: a06a4eeae2d3013b7796ee96c73ff2ee # 例如：abc1234567890abcdefg
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install node-fetch
+        run: npm install node-fetch@2
+
+      - name: Run fetch-comments.js
+        run: node scripts/fetch-comments.js
