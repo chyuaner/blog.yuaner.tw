@@ -33,6 +33,21 @@ toc: true
 * https://fimg.yuaner.tw/200x100/?retina=1&text=こんにちは&font=noto
 * https://fimg.yuaner.tw/350x200/?text=World&font=lobster
 
+## 本站 hexo 自行擴充語法
+### 隱藏段落不render出來
+```markdown
+{% hide %}
+## 草稿章節標題
+
+這整段章節將會被跳過不輸出，即使有多行、圖片、其他 Hexo tag。
+
+{% endhide %}
+
+{% hide draftonly %}
+只有在草稿狀態下才會看到這一段
+{% endhide %}
+```
+
 ## 本站CSS相關
 以下內容已經整理過，可獨立使用，不依賴theme提供的功能。
 
