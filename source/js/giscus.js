@@ -139,6 +139,19 @@ getDatabase, ref, get, set, child,
                 span.title = `${count} 則留言`;
             }
             });
+
+            // 更新最新文章 Widget 的留言數
+            document.querySelectorAll("#krw-posts .list-group .list-group-item").forEach(item => {
+                const pathname = new URL(item.href, location.origin).pathname;
+                const normalizedPath = pathname.endsWith('/') ? pathname : pathname + '/';
+                const count = counts[normalizedPath] || counts[pathname] || 0;
+
+                const span = item.querySelector(".giscus_count");
+                if (span) {
+                span.textContent = count;
+                span.title = `${count} 則留言`;
+                }
+            });
         } catch (err) {
             console.warn("留言數讀取失敗：", err);
         }
