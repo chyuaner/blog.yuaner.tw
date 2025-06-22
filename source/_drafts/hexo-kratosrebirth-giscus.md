@@ -149,15 +149,42 @@ comments:
       page: ""
 ```
 ### Step6: 大功告成！來測試吧～
-因為有改動到 _config.kratos-rebirth.yml檔 ，如果你是邊開hexo server邊改的話，請記得把hexo重啟，才能確定這次改動有沒有成功生效！！
+因為有改動到 `_config.kratos-rebirth.yml`檔 ，如果你是邊開hexo server邊改的話，請記得把hexo重啟，才能確定這次改動有沒有成功生效！！
 
 測試建議以這些情況來測：
 * 請以直接打網址載入文章頁面，看看留言區有沒有載入
 * 網頁載入完成之後，再隨便點一個站內連結，進入到另一篇文章，看看再不重新整理的情況下，另一篇的留言區有沒有正常載入
 
-## 順便加碼：擷取留言數，整合到kratos-rebirth文章標題區
+## 順便加碼：Giscus擷取留言數，整合到kratos-rebirth文章標題區
 
-## 其他進階用法
-其他可以
-不過要做的事情複雜很多，有空再另外開專文來詳述。
+其實你剛剛在修改`_config.kratos-rebirth.yml`檔的時候，應該有注意到其實kratos-rebirth有預留`comments.count`參數可以控制。如果有辦法從外嵌留言系統單獨取到該篇文章目前的總留言數，就可以填進`comments.count.post`。
 
+### 先初步寫死測試
+```yml /_config.kratos-rebirth.yml
+# 留言系統
+comments:
+  count:
+    enable_at: 
+    # - index
+    - post
+    template:
+      _shared: ""
+      index: ""
+      post: "31"
+```
+可以先看一下文章頁面的最上方標題那邊，有沒有出現寫死的「 <i class="fa-regular fa-comment-dots"></i> 31 則留言 」，看看這是不是你想要的效果😊
+
+
+
+
+## 其他更多需求：要一次拉多篇文章的留言數與列表功能
+以上整個留言功能只能針對**當前這一篇**文章顯示，因為Giscus外掛會根據「現在當前網址」結構來判斷要載入哪一篇文章的留言。
+
+如果你有更多的需求，像是：
+* 首頁文章列表每篇文章項目都要顯示該篇文章總留言數
+* 在aside側邊小工具多顯示最新留言清單
+
+這種需要**一次取得多篇文章的留言數** ，那Giscus官方並沒有提供這樣的功能。
+但是因為Giscus本來就是把Github Discussions當留言存放空間，所以可以自行寫程式直接去Github Discussions抓取這些資料。
+
+不過這部份的處理會很麻煩，有空再另外開專文來詳述😉。
