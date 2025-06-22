@@ -54,6 +54,15 @@ function extractPathFromUrl(discussionUrl) {
   return u.searchParams.get('pathname') || '/'; // 自訂欄位（giscus 的 mapping）
 }
 
+function extractPathFromDiscussion(d) {
+  // 假設文章在 Discussions 標題就是 "/yyyy/mm/slug/"
+  // const result = d.title;
+
+  const path = d.title.trim();
+  const result = path.startsWith('/') ? path : '/' + path;
+  return result;
+}
+
 async function buildCommentData() {
   const discussions = await fetchDiscussions();
 
@@ -61,7 +70,8 @@ async function buildCommentData() {
   const allComments = [];
 
   discussions.forEach(d => {
-    const postPath = extractPathFromUrl(d.url);
+    // const postPath = extractPathFromUrl(d.url);
+    const postPath = extractPathFromDiscussion(d);
     counts[postPath] = d.comments.totalCount;
 
     d.comments.nodes.forEach(c => {
