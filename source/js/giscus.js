@@ -93,11 +93,16 @@ getDatabase, ref, get, set, child,
     // ✅ 加上留言數列表更新
     const updateCommentCounts = async () => {
         const GIST_URL = "https://gist.githubusercontent.com/chyuaner/a06a4eeae2d3013b7796ee96c73ff2ee/raw/blog-comments.json";
+        const INDEX_URL = "/post-index.json"; // 假設這是在 Hexo public 裡輸出 post-index.json
         const commentsWidget = document.querySelector('#krw-comments .list-group');
 
         try {
-            const res = await fetch(GIST_URL);
+            const [res, resIndex] = await Promise.all([
+                fetch(GIST_URL),
+                fetch(INDEX_URL)
+            ]);
             const data = await res.json();
+            const postIndex = await resIndex.json();
             const counts = data.counts;
 
             if (commentsWidget) {
@@ -117,9 +122,11 @@ getDatabase, ref, get, set, child,
                                     String(date.getMonth() + 1).padStart(2, '0') + '-' +
                                     String(date.getDate()).padStart(2, '0');
                     const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                    const title = '&nbsp;‧&nbsp;'+postIndex[item.post] || '';
                     // li.innerHTML = `<i class="fa fa-comment"></i> ${item.author}：${item.body.substring(0, 20)}…`;
                     li.innerHTML = `<i class="fa fa-comment"></i> <strong>${item.author}</strong>：${item.body.substring(0, 20)}…
-                                    <br><small>${dateStr} ${timeStr}</small>`;
+                                    <br><small>${dateStr}${title}</small>`;
                     commentsWidget.appendChild(li);
                 });
             }
