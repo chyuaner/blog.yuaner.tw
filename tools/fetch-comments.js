@@ -101,7 +101,7 @@ async function updateGist(content) {
     },
     body: JSON.stringify({
       files: {
-        'comments.json': {
+        'blog-comments.json': {
           content: JSON.stringify(content, null, 2)
         }
       }
@@ -118,7 +118,7 @@ async function updateGist(content) {
   try {
     const result = await buildCommentData();
     await updateGist(result);
-    console.log('✅ Gist 已更新完成：comments.json');
+    console.log('✅ Gist 已更新完成： blog-comments.json');
   } catch (err) {
     console.error('❌ 錯誤：', err);
     process.exit(1);
