@@ -31,10 +31,7 @@ tags:
 </div>
 <div class="xg-col-5 xg-col-sm-12">
 
-<figure>
-  <img src="Screenshot2025-06-13at23-52-17.png" />
-  <figcaption>瞧！這個斷層有多大啊</figcaption>
-</figure>
+![](Screenshot2025-06-13at23-52-17.png "瞧！這個斷層有多大啊～")
 
 </div>
 </div>

@@ -131,6 +131,9 @@ markdown:
     - markdown-it-bracketed-spans
     - markdown-it-anchor
     - markdown-it-container
+    - name: 'markdown-it-image-figures'
+      options:
+        figcaption: true
   anchors:
     level: 2
     permalink: true
