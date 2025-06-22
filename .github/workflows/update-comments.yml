@@ -3,9 +3,9 @@ name: Update Giscus Comment Count
 on:
   schedule:
     - cron: '0 * * * *' # 每小時
-  push:
-    branches:
-      - main # default branch
+  # push:
+  #   branches:
+  #     - main # default branch
   workflow_dispatch:     # 手動觸發也支援
 
 jobs:
