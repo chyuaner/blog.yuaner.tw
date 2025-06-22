@@ -108,7 +108,7 @@ getDatabase, ref, get, set, child,
                 latest.slice(0, 5).forEach(item => {
                     const li = document.createElement('a');
                     li.className = 'list-group-item';
-                    li.href = item.post;
+                    li.href = item.post+'#giscus_container';
                     li.title = item.body; // 滑鼠提示顯示留言內文
 
                     const date = new Date(item.createdAt);
