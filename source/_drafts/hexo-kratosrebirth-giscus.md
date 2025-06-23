@@ -84,7 +84,7 @@ comments:
 {% endcollapse %}
 
 
-雖然kratos-rebirth有官方處理PJAX的範例，不過我一開始只看PJAX事件還是不知道要從哪下手，後來我是以官方提供的[DisqusJS安裝教學](https://eco.krt.moe/posts/comment-disqusjs/)視情況調整成giscus用的。
+雖然kratos-rebirth有[官方處理PJAX的範例](https://wiki.krt.moe/posts/pjax-events/)，不過我一開始只看PJAX事件還是不知道要從哪下手，後來我是以官方提供的[DisqusJS安裝教學](https://eco.krt.moe/posts/comment-disqusjs/)視情況調整成giscus用的。
 
 #### Step5.1: 建立 `/source/comments/giscus.js` 檔案
 請對照剛剛由 giscus 官方產生器產生出來的 &lt;script&gt; ，將以下程式碼 setAttribute 那邊分別填入由giscus官方產出&lt;script&gt;裡的參數內容帶入進去。
@@ -134,7 +134,7 @@ comments:
 因為PJAX啟用情況下，當點選站內超連結時，不會切換整個網頁，會變成原本giscus正常的載入方式不會再被觸發到。
 所以必須先包成function以後，在額外設定PJAX在局部還頁時，也要一起觸發重產giscus這段。
 
-然後由JS產生的留言區，會插入到 &lt;div id=&#x27;giscus_container&#x27;&gt; 區域。接下來的步驟就是要在合適的地方插入這個div區域。
+然後由JS產生的留言區，會插入到 `<div id='giscus_container'>` 區域。接下來的步驟就是要在合適的地方插入這個div區域。
 
 #### Step5.2: 修改 `/_config.kratos-rebirth.yml` 檔案
 ##### Step5.2.1: 注入剛剛的 giscus.js 程式碼
@@ -164,7 +164,7 @@ comments:
       page: ""
 ```
 ### Step6: 大功告成！來測試吧～
-因為有改動到 `_config.kratos-rebirth.yml`檔 ，如果你是邊開hexo server邊改的話，請記得把hexo重啟，才能確定這次改動有沒有成功生效！！
+因為有改動到 `_config.kratos-rebirth.yml` 檔 ，如果你是邊開hexo server邊改的話，請記得把hexo重啟，才能確定這次改動有沒有成功生效！！
 
 測試建議以這些情況來測：
 * 請以直接打網址載入文章頁面，看看留言區有沒有載入
@@ -172,29 +172,103 @@ comments:
 
 ![](Screenshot%202025-06-23%20at%2001-09-49%20%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BC.png)
 
-{% hide draftonly %}
-## 順便加碼：Giscus擷取留言數，整合到kratos-rebirth文章標題區
+
+## 額外加入：Giscus擷取留言數，整合到kratos-rebirth文章標題區
 
 其實你剛剛在修改`_config.kratos-rebirth.yml`檔的時候，應該有注意到其實kratos-rebirth有預留`comments.count`參數可以控制。如果有辦法從外嵌留言系統單獨取到該篇文章目前的總留言數，就可以填進`comments.count.post`。
 
-### 先初步寫死測試
+![](Screenshot%202025-06-23%20at%2001-11-06%20%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BCc.png)
+
+### Step1: 修改現有的Giscus Script
+
+* 要把 `data-emit-metadata` 啟用為 `1`
+* 在loadComments裡面的最後結束之前，插入處理留言數的邏輯。
+
+```JavaScript /source/comments/giscus.js
+(() => {
+    const loadComments = async () => {
+        const giscusContainer = document.getElementById('giscus_container');
+        if (!giscusContainer) return;
+
+        // 清空 iframe
+        while (giscusContainer.firstChild) {
+            giscusContainer.removeChild(giscusContainer.firstChild);
+        }
+
+        // 重建 script
+        const script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', '[在此輸入儲存庫名稱]');
+        script.setAttribute('data-repo-id', '[在此輸入儲存庫 ID]');
+        script.setAttribute('data-category', '[在此輸入分類名稱]');
+        script.setAttribute('data-category-id', '[在此輸入分類 ID]');
+        script.setAttribute('data-mapping', 'pathname');
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '1'); // ⚠️ 就是這段要開啟
+        script.setAttribute('data-input-position', 'bottom');
+        script.setAttribute('data-theme', 'preferred_color_scheme');
+        script.setAttribute('data-lang', 'zh-TW');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('async', '');
+
+        giscusContainer.appendChild(script);
+
+        // ⚠️ 這段插入： 在文章頁面顯示留言數量功能
+        window.addEventListener("message", function giscusMetadataListener(event) {
+            if (event.origin !== "https://giscus.app") return;
+            const data = event.data;
+            // console.log(data); // 💬 如果要知道giscus有提供哪些資料可用，可用這段搭配瀏覽器主控台測試
+            if (data?.giscus?.discussion?.totalCommentCount !== undefined) {
+                // 若有留言數據
+                const comment = data.giscus.discussion.totalCommentCount;
+                const reply_count = data.giscus.discussion.totalReplyCount;
+                const count = comment + reply_count;
+                const countElem = document.getElementById("giscus_count");
+                if (countElem) countElem.textContent = count;
+            } else if (data?.giscus?.error === "Discussion not found") {
+                // 討論串不存在，視同留言數0
+                const countElem = document.getElementById("giscus_count");
+                if (countElem) countElem.textContent = "0";
+            }
+        });
+    };
+
+    // 載入＆pjax 重新掛載
+    window.loadComments = loadComments;
+    window.addEventListener('pjax:success', () => {
+        window.loadComments = loadComments;
+    });
+})();
+```
+
+### Step2: 修改 /_config.kratos-rebirth.yml 檔案
+設定安插#giscus_container的地方，並啟用文章的評論功能
+
 ```yml /_config.kratos-rebirth.yml
 # 留言系統
 comments:
+  core:
+    enable_at:
+    # - index
+      - post
+      - page
+    template:
+      _shared: "<div id='giscus_container' class='kr-comments' data-path='$PATH' data-full-path='$PATH_FULL'></div>"
+      index: ""
+      post: ""
+      page: ""
+  # ⚠️ count這段插入
   count:
     enable_at: 
-    # - index
+    - index
     - post
     template:
       _shared: ""
       index: ""
-      post: "3"
+      # ⚠️ 重點是＃giscus_count這段
+      post: "<span id='giscus_count'>?</span>"
 ```
-可以先看一下文章頁面的最上方標題那邊，有沒有出現寫死的「 <i class="fa-regular fa-comment-dots"></i> 3 則留言 」，看看這是不是你想要的效果😊
-
-![](Screenshot%202025-06-23%20at%2001-11-06%20%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BCc.png)
-
-{% endhide %}
 
 ## 其他更多需求：要一次拉多篇文章的留言數與列表功能
 以上整個留言功能只能針對**當前這一篇**文章顯示，因為Giscus外掛會根據「現在當前網址」結構來判斷要載入哪一篇文章的留言。
