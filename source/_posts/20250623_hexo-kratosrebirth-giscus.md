@@ -1,17 +1,20 @@
 ---
 title: 安裝留言系統Giscus到hexo kratos-rebirth (PJAX處理)
-cover: Screenshot%202025-06-23%20at%2001-09-49%20%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BC.png
+cover: >-
+  Screenshot%202025-06-23%20at%2001-09-49%20%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BC.png
+categories:
+  - hexo
+tags:
+  - hexo
+  - giscus
+  - kratos-rebirth
 toc: true
 expire: 365
-categories:
-    - hexo
-tags:
-    - hexo
-    - giscus
-    - kratos-rebirth
 mark:
-    TODO: 本篇有用到 {% collapse 如果不想處理PJAX %} 寫法，有空需回頭處理這篇的格式問題
+  TODO: 本篇有用到 {% collapse 如果不想處理PJAX %} 寫法，有空需回頭處理這篇的格式問題
+date: 2025-06-23 18:46:43
 ---
+
 
 ## 安裝步驟
 其實Step1~4之前，應該和絕大部分爬文可以爬的到的教學差不多。不過從Step5開始，因為這個theme有用到PJAX技術（PJAX會在後面說明），導致不能直接用giscus產生出來的script使用。若是在這邊卡關，可以直接跳去看[Step5 嵌入到hexo kratos-rebirth](#Step5-%E5%B5%8C%E5%85%A5%E5%88%B0hexo-kratos-rebirth)。
