@@ -222,5 +222,13 @@ additional_injections:
     
     <script type="module" src="/js/giscus.js"></script>
   page404_content: |
-    <script>const fullPath = location.pathname + location.search; const tryToOldSiteA = document.getElementById('try-to-oldsite-url'); tryToOldSiteA.href = 'https://blog-legacy.yuaner.tw'+fullPath;</script>
-    <p>PS. 如果你是從舊連結舊網址過來的，舊文章已經移到另一個網址去了，<a id="try-to-oldsite-url" href="#">你要不要嘗試前往舊站看看啊？</a></p>
+    <p>PS. 如果你是從舊連結舊網址過來的，舊文章已經移到另一個網址去了，<a id="try-to-oldsite-url" href="#">你要不要嘗試前往舊站看看啊</a>？</p>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const fullPath = location.pathname + location.search;
+        const tryToOldSiteA = document.getElementById('try-to-oldsite-url');
+        if (tryToOldSiteA) {
+          tryToOldSiteA.href = 'https://blog-legacy.yuaner.tw' + fullPath;
+        }
+      });
+    </script>
