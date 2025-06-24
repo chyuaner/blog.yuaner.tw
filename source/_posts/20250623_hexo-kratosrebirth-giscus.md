@@ -41,7 +41,7 @@ repo → Discussions → 左側Categories有個小鉛筆編輯
 
 然後按照他的網頁指示，填入需要的資料，就會生出&lt;script&gt;碼給你貼到你的網頁上。
 
-至於在 「頁面 ↔️ discussion 對應方式」這個地方，我是選「Discussion 的標題包含頁面的路徑名稱」，利用網址結構對應，至於[網址結構的設計建議可以參考我的上一篇](/2025/06/url-permalink-design)。
+至於在 「頁面 ↔️ discussion 對應方式」這個地方，我是選「Discussion 的標題包含頁面的路徑名稱」，利用網址結構對應，至於{% post_link url-permalink-design '網址結構的設計建議可以參考我的上一篇' %}。
 
 如果Step2有開設存放留言專用的categories，記得在「Discussion 分類」要選擇你要的分類。
 

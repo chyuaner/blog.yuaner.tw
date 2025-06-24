@@ -97,7 +97,7 @@ toc: true
 ```
 
 ### AlertBar
-詳細介紹文： [CSS為你的網站文章添加 AlertBar](/2025/06/css-xg-alertbar)
+詳細介紹文： {% post_link css-xg-alertbar 'CSS為你的網站文章添加 AlertBar' %}
 
 <!-- 原生HTML寫法 -->
 <div class="xg-alertbar xg-alertbar-warning">
@@ -154,7 +154,7 @@ toc: true
 ```
 
 ### 仿造萌娘百科用的防劇透格式
-詳細介紹文： [CSS為你的網站文章添加防劇透用的黑幕、模糊效果](/2025/06/css-heimu)
+詳細介紹文： {% post_link css-heimu 'CSS為你的網站文章添加防劇透用的黑幕、模糊效果' %}
 
 #### spoiler Heimu 黑幕
 
