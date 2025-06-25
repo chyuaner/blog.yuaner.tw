@@ -121,3 +121,50 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media (prefers-color-scheme: dark) {
+  .cal {
+    color: white;
+  }
+
+  .cal-prev,
+  .cal-next {
+    color: #ccc;
+  }
+
+  .cal-prev::before {
+    border-right: 9px solid #ccc;
+  }
+
+  .cal-next::before {
+    border-left: 9px solid #ccc;
+  }
+
+  .cal-title {
+    color: #ccc;
+  }
+  
+  .cal th {
+    background: inherit;
+    color: #707e93;
+    border-bottom: 1px #3c495bbb solid;
+  }
+
+  .cal tbody a {
+    background-color: #3c495bbb;
+    color: white;
+    display: block;
+    font-weight: 700;
+    border: 1px solid #23272F;
+  }
+
+  .cal .cal-gray {
+    color: black;
+  }
+
+  .cal tbody a:hover,
+  .cal tbody a:focus {
+    background-color: #CBCBCB;
+    color: #23272F;
+  }
+}
