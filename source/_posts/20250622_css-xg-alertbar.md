@@ -2,7 +2,7 @@
 title: CSS為你的網站文章添加 AlertBar
 cover: sample.png
 categories:
-  - CSS
+  - [hexo部落格架設經驗, CSS]
 tags:
   - CSS
   - hexo

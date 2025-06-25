@@ -3,7 +3,7 @@ title: 安裝Giscus留言系統到hexo kratos-rebirth (PJAX處理)
 cover: >-
   Screenshot%202025-06-23%20at%2001-09-49%20%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BC.png
 categories:
-  - hexo
+  - [hexo部落格架設經驗, theme, "Kratos:Rebirth"]
 tags:
   - hexo
   - giscus

@@ -1,7 +1,7 @@
 ---
 title: Cloudflare Worker 主域名共用不同主機新舊站，透過後綴字串名單，有條件的導向到新域名
 categories:
-  - 架站相關
+  - hexo部落格架設經驗
 tags:
   - Cloudflare
   - CDN

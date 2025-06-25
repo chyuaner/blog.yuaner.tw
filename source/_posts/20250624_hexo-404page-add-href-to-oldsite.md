@@ -3,7 +3,7 @@ title: hexo kratos-rebirth 404頁面 插入超連結引導使用者前往搬移�
 cover: >-
   Screenshot%202025-06-24%20at%2015-08-21%20%E9%80%99%E5%80%8B%E9%A0%81%E9%9D%A2%E8%B5%B0%E4%B8%9F%E4%BA%86%E5%91%A2%E2%80%A6%20%E5%85%83%E5%85%92%EF%BD%9E%E7%9A%84%E6%96%B0%E9%83%A8%E8%90%BD%E6%A0%BC.png
 categories:
-  - hexo
+  - [hexo部落格架設經驗, theme, "Kratos:Rebirth"]
 tags:
   - hexo
   - kratos-rebirth

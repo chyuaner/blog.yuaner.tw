@@ -3,7 +3,7 @@ title: 新部落格重新開張了！！
 date: 2025-06-13 22:31:31
 cover:
 categories:
-  - 隨口說說
+  - hexo部落格架設經驗
 tags:
   - hexo
   - WordPress

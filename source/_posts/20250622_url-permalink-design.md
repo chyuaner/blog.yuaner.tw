@@ -1,7 +1,7 @@
 ---
 title: 部落格網址規劃考量
 categories:
-  - 架站相關
+  - hexo部落格架設經驗
 tags:
   - hexo
 date: 2025-06-22 17:59:30

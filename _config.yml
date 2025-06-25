@@ -71,6 +71,9 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  hexo部落格架設經驗: hexo
+  CSS: css
+  "Kratos:Rebirth": kratos-rebirth
   隨口說說: diary
 
 tag_map:
