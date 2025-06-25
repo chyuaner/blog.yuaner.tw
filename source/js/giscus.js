@@ -71,7 +71,7 @@ getDatabase, ref, get, set, child,
         const curUrl = oriUrl + window.location.pathname;
     
         const readVisits = async (url, selector) => {
-            const dbKey = decodeURI(url.replace(/\/|\./g, '_'));
+            const dbKey = 'visits/' + decodeURI(url.replace(/\/|\./g, '_'));
             let count = 1;
             const res = await get(child(ref(db), dbKey));
             if (res.exists()) {
