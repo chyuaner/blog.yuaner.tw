@@ -128,7 +128,7 @@ _paq.push(['trackPageView']);
 > 注意！因為[kratos-rebirth有用到Pjax不換頁換頁技術](https://wiki.krt.moe/posts/pjax-events/)（就是在網頁上點選站內連結，只會在局部區塊載入新頁面，不更換整個網頁），JS插入法需要額外處理！！
 {.xg-alertbar .xg-alertbar-warning}
 
-基本上可以參考 {% post_link new-blog-is-opened "我先前寫過的文章，有提到外嵌留言Pjax處理的方式" %} 
+基本上可以參考 {% post_link hexo-kratosrebirth-giscus "我先前寫過的文章，有提到外嵌留言Pjax處理的方式" %} 
 
 這次我是直接跟著外嵌留言刷新時的觸發點，直接混在裡面處理的：
 
