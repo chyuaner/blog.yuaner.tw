@@ -56,7 +56,8 @@
 }
 
 .cal-title a {
-  border: 1px solid transparent;
+  font: bold 14px/18px Arial;
+  /* border: 1px solid transparent; */
   color: #f76b61;
 }
 
@@ -80,20 +81,25 @@
   font-weight: 900 !important;
 }
 
-.cal tbody a {
+.cal tbody td {
+  background-color: transparent;
+  /* color: white; */
+  border: 1px solid transparent;
+}
+
+.cal tbody td:has(a) {
   background-color: #e0e0e0aa;
   color: white;
-  display: block;
   font-weight: 700;
   border: 1px solid white;
 }
 
-.cal tbody .cal-today {
+.cal tbody td.cal-today {
   background-color: #8ec5fc;
   color: #fffd;
 }
 
-.cal .cal-gray {
+.cal td.cal-gray {
   color: #ddd;
 }
 
@@ -115,8 +121,8 @@
   color: #42d3d8;
 }
 
-.cal tbody a:hover,
-.cal tbody a:focus {
+.cal tbody td:has(a):hover,
+.cal tbody td:has(a):focus {
   background-color: #ffdfdd;
   color: #fff;
   cursor: pointer;
@@ -150,10 +156,9 @@
     border-bottom: 1px #3c495bbb solid;
   }
 
-  .cal tbody a {
+  .cal tbody td:has(a) {
     background-color: #3c495bbb;
     color: white;
-    display: block;
     font-weight: 700;
     border: 1px solid #23272F;
   }
@@ -162,8 +167,8 @@
     color: black;
   }
 
-  .cal tbody a:hover,
-  .cal tbody a:focus {
+  .cal tbody td:has(a):hover,
+  .cal tbody td:has(a):focus {
     background-color: #CBCBCB;
     color: #23272F;
   }
