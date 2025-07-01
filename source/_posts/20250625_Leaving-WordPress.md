@@ -1,5 +1,5 @@
 ---
-title: 從Wordpress更換到靜態型部落格系統
+title: 從Wordpress逃難...
 cover: >-
   Screenshot%202025-06-25%20at%2016-04-18%20%E7%B7%A8%E8%BC%AF%E6%96%87%E7%AB%A0%20-%20%E7%9B%AE%E5%89%8D%E6%AE%98%E7%95%99%E7%9A%84%E6%98%9F%E9%9A%9B%E8%AD%AF%E7%8E%8B%E5%AD%97%E5%85%B8%E6%AA%94%20%E2%80%B9%20%E5%85%83%E5%85%92%EF%BD%9E%20%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98%EF%BC%88%E8%88%8A%E7%AB%99%EF%BC%89%20%E2%80%94%20WordPress.png
 toc: true
