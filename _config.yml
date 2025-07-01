@@ -151,7 +151,7 @@ markdown:
     typographer: true
 
 calendar:
-  single: false
+  single: true
   root: calendar/
 
 sitemap:

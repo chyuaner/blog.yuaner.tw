@@ -175,17 +175,28 @@ class ACalendar {
       await this.loadPostsByMonth();
     }
     if (this.allPosts) {
-      const key = this.dYear + '-' + String(this.dMonth + 1).padStart(2, '0');
-      this.current.posts = this.allPosts[key] || [];
+      const key1 = `${this.dYear}-${this.dMonth + 1}`;
+      const key2 = `${this.dYear}-${String(this.dMonth + 1).padStart(2, '0')}`;
+      this.current.posts = this.allPosts[key1] ?? this.allPosts[key2] ?? [];
     }
   }
 
   async loadAllPosts() {
-    if (this.settings.url && !this.allPosts) {
+    if (!this.allPosts) {
       const res = await fetch(this.settings.url);
-      const data = await res.json();
-      this.allPosts = data;
-      this.initMonths(Object.keys(data));
+      if (!res.ok) return;
+
+      this.allPosts = await res.json();
+      this.months = Object.keys(this.allPosts).map((key) => {
+        const [year, month] = key.split("-");
+        return new Date(Number(year), Number(month) - 1);
+      });
+    }
+
+    if (this.parse()) {
+      const key1 = `${this.dYear}-${this.dMonth + 1}`;
+      const key2 = `${this.dYear}-${String(this.dMonth + 1).padStart(2, '0')}`;
+      this.current.posts = this.allPosts[key1] ?? this.allPosts[key2] ?? [];
     }
   }
 
@@ -207,6 +218,38 @@ class ACalendar {
       return new Date(Date.UTC(+ym[0], +ym[1] - 1));
     });
   }
+
+  parse() {
+    const time = Date.UTC(this.dYear, this.dMonth);
+
+    if (!this.months || this.months.length === 0) {
+      this.current.prev = null;
+      this.current.next = null;
+      return false;
+    }
+
+    this.current.posts = [];
+
+    for (let i = 0; i < this.months.length; i++) {
+      const cTime = this.months[i].getTime();
+
+      if (time === cTime) {
+        this.current.prev = i > 0 ? this.months[i - 1] : null;
+        this.current.next = i < this.months.length - 1 ? this.months[i + 1] : null;
+        return true;
+      } else if (time < cTime) {
+        this.current.prev = i > 0 ? this.months[i - 1] : null;
+        this.current.next = this.months[i];
+        break;
+      } else {
+        this.current.prev = this.months[i];
+        this.current.next = null;
+      }
+    }
+
+    return false;
+  }
+
 
   nextMonth() {
     if (this.dMonth < 11) {
