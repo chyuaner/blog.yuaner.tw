@@ -29,7 +29,7 @@ nav:
   items:
     - label: 首頁
       icon: home
-      url: /
+      url: https://yuaner.tw
     - label: 所有文章
       icon: <i class="fa-regular fa-file-zipper"></i>
       url: /archives/
