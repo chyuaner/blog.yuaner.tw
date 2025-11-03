@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
-    "hexo": "^7.3.0",
+    "hexo": "^8.1.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-calendar": "file:external/hexo-generator-calendar",
     "hexo-generator-category": "^2.0.0",
