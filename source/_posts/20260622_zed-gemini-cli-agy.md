@@ -8,6 +8,9 @@ tags:
   - zed
   - gemini-cli
 date: 2026-06-22 19:51:15
+show_copyright: true
+copyright_notice_template:
+  本篇依據 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA 4.0 姓名標示-相同方式分享</a> 授權釋出。 
 ---
 
 
