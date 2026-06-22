@@ -1,6 +1,7 @@
 ---
 title: 讓Zed編輯器繼續使用Gemini CLI（以Antigravity CLI的方式）
 cover: Screenshot_20260621_021000.png
+toc: true
 categories:
   - - 開發工具
 tags:
@@ -32,7 +33,7 @@ Failed to sign in. Message: This client is no longer supported for Gemini Code A
 
 而Google官方的解法就是叫我改用Google自家的IDE Antigravity，但...我就是因為不想用VS Code和所有VS Code底的編輯器啊😭～～～
 
-## 我也不想使用Zed內建的Zed Agent - Google AI，額度消耗太快了
+## Zed內建的Zed Agent - Google AI，額度消耗太快了
 
 其實在Gemini CLI收掉以後，我也有嘗試使用Zed內建的Zed Agent。
 不過Zed Agent - Google AI基本的使用方式就是要去AI Studio那邊取得到API Key以後，填進Zed設定裡面。
@@ -84,7 +85,7 @@ Zed內建Google AI Provider（使用GEMINI_API_KEY）會使用的是：
 
 ## 實際建置步驟
 
-### 安裝Antigravity CLI
+### 1. 安裝Antigravity CLI
 去[官方網站按照這一頁的教學](https://antigravity.google/download#antigravity-cli)，使用Google的腳本安裝在你的家目錄資料夾內。 
 
 ```bash
@@ -93,27 +94,26 @@ curl -fsSL https://antigravity.google/cli/install.sh | bash
 
 他會將執行檔安裝在 `~/.local/bin/agy` ，然後我先前在Gemini CLI的已登入狀態和設定會直接沿用。
 
-### git clone agy-acp 橋接器
+### 2. 下載 agy-acp 橋接器
 先`cd`到你想放置的資料夾以後，執行以下內容：
 ```bash
 git clone https://github.com/hicder/agy-acp.git
 cd agy-acp
 ```
 
-### Build建置橋接器
+### 3. Build建置橋接器
 ```bash
 cargo build --release
 ```
 
-### 安裝到`PATH`環境變數抓得到的
+### 4. 安裝到`PATH`環境變數抓得到的
 ```bash
 cp target/release/agy-acp /usr/local/bin/
 ```
 
 其實我覺得理論上也可以放在家目錄，不過因為這台電腦只有我一個人會用，想說省事就照官方教學走。
 
-
-### 設定Zed
+### 5. 設定Zed
 請在家目錄編輯Zed的設定檔 `~/.config/zed/settings.json` 填入以下內容：
 ```json _~/.config/zed/settings.json 
 "agent_servers": {
@@ -126,7 +126,7 @@ cp target/release/agy-acp /usr/local/bin/
 }
 ```
 
-### 🎉完成囉，測試吧～
+### 6. 🎉完成囉，測試吧～
 
 設定好之後，將Zed編輯器重開，然後按下右上角的「+」圖案，選擇`External Agents`你剛剛建立好的「Antigravity CLI」，順利的話，應該會在Model清單看到熟悉的「Gemini 3.5 Flash」字樣，然後就可以開一個專案來測試囉～Ya~🎊
 
@@ -134,6 +134,7 @@ cp target/release/agy-acp /usr/local/bin/
 
 ## 可能會遇到的問題
 ### 對話沒有回應，而且模型列表出現「Unknown」
+{% asset_img Screenshot_20260622_045210.png "agy-acp成功接入的畫面截圖" %}
 
 主要原因是：agy-acp橋接器沒有處理這種狀況，出錯也不會顯示錯誤訊息。
 我這邊遇到的真正原因是：帳號被登出，所以我再手動使用 `agy` 指令，然後重新登入以後，再將Zed編輯器重開，就可以正常使用了。
