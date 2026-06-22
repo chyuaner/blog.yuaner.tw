@@ -7,7 +7,9 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo clean && touch db.json && hexo server",
-    "draft-server": "hexo clean && touch db.json && hexo server --draft"
+    "draft-server": "hexo clean && touch db.json && hexo server --draft",
+    "dev": "npm run draft-server",
+    "host": "npm run draft-server -i 0.0.0.0"
   },
   "hexo": {
     "version": "7.3.0"
