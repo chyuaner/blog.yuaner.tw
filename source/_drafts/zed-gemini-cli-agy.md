@@ -69,9 +69,9 @@ Zed內建Google AI Provider（使用GEMINI_API_KEY）會使用的是：
 
 既然Gemini CLI收掉，但是Google官方有推出Antigravity CLI，然後有人就做出橋接轉換器，把Antigravity CLI當作ACP接到Zed編輯器。
 
-{% link text url [external] [title] %}
-
-https://www.reddit.com/r/google_antigravity/comments/1u215bd/acp_adapter_for_antigravity_cli/
+{% link_preview "https://www.reddit.com/r/google_antigravity/comments/1u215bd/acp_adapter_for_antigravity_cli/" %}
+ACP adapter for Antigravity CLI : r/google_antigravity
+{% endlink_preview %}
 
 我自己這邊實測可行，所以以下就紀錄以下步驟：
 
