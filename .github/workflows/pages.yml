@@ -62,13 +62,13 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Purge Cloudflare Cache
-        if: ${{ secrets.CLOUDFLARE_ZONE_ID != '' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CCDN_HOST != '' }}
+        if: ${{ secrets.CLOUDFLARE_ZONE_ID != '' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_HOST != '' }}
         env:
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CCDN_HOST: ${{ secrets.CCDN_HOST }}
+          CLOUDFLARE_HOST: ${{ secrets.CLOUDFLARE_HOST }}
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
             -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
             -H "Content-Type: application/json" \
-            --data "{\"hosts\":[\"${CCDN_HOST}\"]}"
+            --data "{\"hosts\":[\"${CLOUDFLARE_HOST}\"]}"
