@@ -1,5 +1,5 @@
 ---
-title: 讓Zed編輯器繼續使用Gemini CLI（以Antigravity CLI的方式）
+title: Zed編輯器繼續用Gemini CLI（Antigravity CLI 接入）
 cover: Screenshot_20260621_021000.png
 toc: true
 categories:
@@ -83,7 +83,7 @@ Zed內建Google AI Provider（使用GEMINI_API_KEY）會使用的是：
 
 我自己這邊實測可行，所以以下就紀錄以下步驟：
 
-## 實際建置步驟
+## 安裝步驟
 
 ### 1. 安裝Antigravity CLI
 去[官方網站按照這一頁的教學](https://antigravity.google/download#antigravity-cli)，使用Google的腳本安裝在你的家目錄資料夾內。 
