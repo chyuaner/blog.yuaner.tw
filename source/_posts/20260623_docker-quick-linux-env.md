@@ -5,9 +5,13 @@ categories: Linux
 tags:
   - docker
 show_copyright: true
-copyright_notice_template:
-  本篇教學主文依據 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA 4.0 姓名標示-相同方式分享</a> 授權釋出。 
+copyright_notice_template: >-
+  本篇教學主文依據 <a rel="license nofollow" target="_blank"
+  href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA
+  4.0 姓名標示-相同方式分享</a> 授權釋出。
+date: 2026-06-23 04:04:23
 ---
+
 
 有時候可能會臨時需要一個乾淨的Linux環境，像我的用途就是：
 - 整理教學文時，需要模擬一個尚未安裝的乾淨環境
