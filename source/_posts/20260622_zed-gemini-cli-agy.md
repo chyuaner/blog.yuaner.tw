@@ -1,13 +1,14 @@
 ---
 title: 讓Zed編輯器繼續使用Gemini CLI（以Antigravity CLI的方式）
-cover: >-
-  Screenshot_20260621_021000.png
+cover: Screenshot_20260621_021000.png
 categories:
-  - ['開發工具']
+  - - 開發工具
 tags:
   - zed
   - gemini-cli
+date: 2026-06-22 19:51:15
 ---
+
 
 在現在開發工具VS Code當道，甚至Google也拿VS Code改造出自己的IDE編輯器Antigravity。
 
@@ -69,9 +70,15 @@ Zed內建Google AI Provider（使用GEMINI_API_KEY）會使用的是：
 
 既然Gemini CLI收掉，但是Google官方有推出Antigravity CLI，然後有人就做出橋接轉換器，把Antigravity CLI當作ACP接到Zed編輯器。
 
-{% link_preview "https://www.reddit.com/r/google_antigravity/comments/1u215bd/acp_adapter_for_antigravity_cli/" %}
-ACP adapter for Antigravity CLI : r/google_antigravity
-{% endlink_preview %}
+<a href="https://www.reddit.com/r/google_antigravity/comments/1u215bd/acp_adapter_for_antigravity_cli/" target="_blank" rel="nofollow" class="link-preview">
+    <div class="og-image-special">
+        <img src="https://www.redditstatic.com/shreddit/assets/favicon/192x192.png" alt="Reddit Logo" class="not-gallery-item" loading="lazy">
+    </div>
+    <div class="descriptions-special">
+        <div class="og-title-special">ACP adapter for Antigravity CLI : r/google_antigravity</div>
+        <div class="og-description-special">While the legacy Gemini CLI had support for certain agent protocols, the newer Antigravity CLI initially launched without native ACP support. This third-party ACP adapter (agy-acp) serves as a local stdio bridge to translate ACP-shaped JSON-RPC flows.</div>
+    </div>
+</a>
 
 我自己這邊實測可行，所以以下就紀錄以下步驟：
 

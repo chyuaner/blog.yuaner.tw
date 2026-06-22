@@ -154,8 +154,15 @@ calendar:
   single: true
   root: calendar/
 
+link_preview:
+  class_name:
+    anchor_link: link-preview
+    image: not-gallery-item
+  description_length: 140
+  disguise_crawler: true
+
 sitemap:
-  path: 
+  path:
     - sitemap.xml
     - sitemap.txt
   rel: false

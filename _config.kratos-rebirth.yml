@@ -204,6 +204,7 @@ additional_injections:
     <link rel="stylesheet" href="/css/spoiler.css">
     <link rel="stylesheet" href="/css/alertbar.css">
     <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/link-preview.css">
   footer: ""
   after_footer: |
     <!-- Matomo -->
