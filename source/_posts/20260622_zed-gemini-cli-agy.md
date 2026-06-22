@@ -11,11 +11,11 @@ date: 2026-06-22 19:51:15
 ---
 
 
-在現在開發工具VS Code當道，甚至Google也拿VS Code改造出自己的IDE編輯器Antigravity。
+在現在開發工具[VS Code](https://code.visualstudio.com/)當道，甚至Google也拿VS Code改造出自己的IDE編輯器[Antigravity](https://antigravity.google/product/antigravity-ide)。
 
-而會用Zed編輯器的人應該都是不想被VS Code效能問題折騰，因為畢竟VS Code底的，都是前端技術開發，本質上就是一個超肥重瀏覽器在支撐整個程式。要不然大家全都用Antigravity就好了。
+而會用[Zed編輯器](https://zed.dev/)的人應該都是不想被VS Code效能問題折騰，因為畢竟VS Code底的，都是前端技術開發，本質上就是一個超肥重瀏覽器在支撐整個程式。要不然大家全都用Antigravity就好了。
 
-而且Zed官方最有自信標榜的就是支援各大AI工具平台，也包含Gemini，但......
+而且[Zed官方最有自信標榜的就是支援各大AI工具平台](https://zed.dev/acp)，也包含Gemini，但......
 
 ## Gemini CLI收掉了😭
 
