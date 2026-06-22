@@ -27,9 +27,9 @@ image:
 # 顶部导航栏配置
 nav:
   items:
-    - label: 首頁
+    - label: 本站首頁
       icon: home
-      url: https://yuaner.tw
+      url: /
     - label: 所有文章
       icon: <i class="fa-regular fa-file-zipper"></i>
       url: /archives/
@@ -54,6 +54,10 @@ nav:
     - label: 搜尋
       icon: search
       url: /search/
+    - label: 我的主頁
+      float_right: true
+      icon: home
+      url: https://yuaner.tw
     - label: 舊站
       float_right: true
       icon: <i class="fa-solid fa-right-to-bracket"></i>
