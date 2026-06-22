@@ -179,7 +179,7 @@ comments:
       post: ""
       page: ""
   count:
-    enable_at: 
+    enable_at:
     - index
     - post
     template:
@@ -200,6 +200,7 @@ visit_count:
 additional_injections:
   head: |
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/patch.css">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/spoiler.css">
     <link rel="stylesheet" href="/css/alertbar.css">
@@ -221,7 +222,7 @@ additional_injections:
       })();
     </script>
     <!-- End Matomo Code -->
-    
+
     <script type="module" src="/js/giscus.js"></script>
   page404_content: |
     <p>PS. 如果你是從舊連結舊網址過來的，舊文章已經移到另一個網址去了，<a id="try-to-oldsite-url" href="#">你要不要嘗試前往舊站看看啊</a>？</p>

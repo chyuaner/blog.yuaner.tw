@@ -1,0 +1,4 @@
+/* 移除文章內所有圖片的預設框線 */
+.kratos-page-content img {
+  border: none !important;
+}
