@@ -1,6 +1,6 @@
 ---
 title: 將Synology NAS主機以DDNS綁定到Cloudflare代管
-cover:
+cover: cover.png
 categories: Synology
 tags:
   - Synology
@@ -8,12 +8,18 @@ tags:
   - Cloudflare
 toc: true
 show_copyright: true
-copyright_notice_template:
-  本篇依據 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA 4.0 姓名標示-相同方式分享</a> 授權釋出。 
+copyright_notice_template: >-
+  本篇依據 <a rel="license nofollow" target="_blank"
+  href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA
+  4.0 姓名標示-相同方式分享</a> 授權釋出。
+date: 2026-07-09 18:50:44
 ---
+
 
 現在我的 yuaner.tw 主域名是給Cloudflare管理，然後我有幾個重要網站服務就是從我的NAS主機提供的。
 我的Synology NAS是放在家裡，並以PPPoE方式獨立對外連線。因為家用的中華電信光世代只提供一個固定IP（而且還要另外申請），所以我還是會以DDNS方式拿到當前IP以後再自動重新綁到我的Cloudflare DNS管理商。
+{% asset_img "cover.png" "Cover" %}
+
 
 ## DDNS綁定到Cloudflare DNS代管商
 Cloudflare 官方本身其實沒有像 No-IP、DynDNS 或 Synology DDNS 那樣，提供一個專屬、獨立的 DDNS 服務或官方的 DDNS 用戶端軟體。
