@@ -37,5 +37,8 @@
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-container": "^4.0.0",
     "markdown-it-image-figures": "^2.1.1"
+  },
+  "devDependencies": {
+    "hexo-browsersync": "^0.3.0"
   }
 }
