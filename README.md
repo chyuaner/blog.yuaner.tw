@@ -28,6 +28,10 @@ npx hexo publish "草稿標題"
 ```
 或者也可以直接手動將檔案從 `source/_drafts/` 移動到 `source/_posts/` 底下。
 
+> [!IMPORTANT]
+> **執行指令時的注意事項**
+> 執行任何 `npx hexo` 指令前，請務必先將終端機切換至**專案的根目錄**（即包含 `package.json` 的目錄）。若不在專案根目錄下執行，Hexo 會因為找不到專案設定檔而無法識別 `publish`、`new` 等指令，並直接顯示「無效指令」的說明文件。
+
 ### 本機預覽 (Preview Locally)
 *   **預覽正式文章**：
     ```bash
@@ -148,3 +152,23 @@ npm run server
 npm run draft-server
 ```
 伺服器啟動後，即可在瀏覽器開啟 `http://localhost:4000` 進行預覽。
+
+## GitHub Actions 部署與 Cloudflare CDN 快取設定
+
+本專案使用 GitHub Actions 進行自動化建置與部署（到 GitHub Pages）。此外，在部署成功後，會自動呼叫 Cloudflare API 清除指定主機名稱（Hostname）的 CDN 快取，以確保最新文章能立即呈現。
+
+該快取清除步驟在缺少 Secrets 設定時會自動跳過，不會影響部署流程：
+
+### 需要設定的 Secrets
+請前往您專案 GitHub 儲存庫的 `Settings` -> `Secrets and variables` -> `Actions` 下的 **Repository secrets** 中設定以下三個變數：
+
+1. **`CLOUDFLARE_ZONE_ID`**：
+   您的 Cloudflare 網域 Zone ID（可於 Cloudflare 網域的 **Overview** 頁面右側找到）。
+2. **`CLOUDFLARE_API_TOKEN`**：
+   具備快取清除權限的 API Token。
+   * **建立與權限設定建議**：請至 Cloudflare 控制台的 **My Profile** -> **API Tokens**，點擊最底下的 **Create Custom Token**（建立自訂權杖），新增權限為：`Zone` -> `Cache Purge` -> `Edit`，並將區域資源限制在您部落格的特定網域。
+3. **`CCDN_HOST`**：
+   您需要清除快取的主機名稱（例如：`blog.yuaner.tw`）。
+
+> [!NOTE]
+> 如果沒有設定上述三個 Secrets，工作流依然會順利建置與部署成功，但會自動略過 Cloudflare 快取清除的步驟，並在部署日誌中印出 `Cloudflare cache purge skipped: missing required secrets.`。
