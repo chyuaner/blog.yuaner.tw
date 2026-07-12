@@ -1,18 +1,20 @@
 ---
 title: 將Gmail以你的自有域名信箱地址收發信（使用Cloudflare轉送站）
-title_br: "將Gmail以你的自有域名信箱地址收發信<br>（使用Cloudflare轉送站）"
 cover: brave_screenshot_mail.google.com.png
 categories: Cloudflare
 tags:
   - Cloudflare
   - Gmail
+title_br: 將Gmail以你的自有域名信箱地址收發信<br>（使用Cloudflare轉送站）
 toc: true
 show_copyright: true
 copyright_notice_template: >-
   本篇依據 <a rel="license nofollow" target="_blank"
   href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA
   4.0 姓名標示-相同方式分享</a> 授權釋出。
+date: 2026-07-12 15:32:52
 ---
+
 
 目前我主要的Email都是使用Gmail，對外也都是給我的gmail信箱地址，想說直接用gmail地址是最省事也是最穩的。
 不過有些網站註冊會有特殊需求，得用自己準備的域名，或是有時候會有工作需求需要使用自己的Gmail信箱卻要以工作用的Email地址發出。
