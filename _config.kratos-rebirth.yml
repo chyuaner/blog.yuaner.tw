@@ -228,6 +228,7 @@ additional_injections:
     <!-- End Matomo Code -->
 
     <script type="module" src="/js/giscus.js"></script>
+    <script src="/js/cf-email-pjax.js" defer></script>
   page404_content: |
     <p>PS. 如果你是從舊連結舊網址過來的，舊文章已經移到另一個網址去了，<a id="try-to-oldsite-url" href="#">你要不要嘗試前往舊站看看啊</a>？</p>
     <script>
