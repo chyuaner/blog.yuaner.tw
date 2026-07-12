@@ -7,18 +7,20 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo clean && touch db.json && hexo server",
-    "draft-server": "hexo clean && touch db.json && hexo server --draft"
+    "draft-server": "hexo clean && touch db.json && hexo server --draft",
+    "dev": "npm run draft-server",
+    "host": "npm run draft-server -i 0.0.0.0"
   },
   "hexo": {
     "version": "7.3.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/fontawesome-free": "^7.2.0",
     "hexo": "^8.1.2",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-calendar": "file:external/hexo-generator-calendar",
     "hexo-generator-category": "^2.0.0",
-    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-feed": "^4.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
@@ -28,11 +30,15 @@
     "hexo-renderer-markdown-it": "^7.1.1",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
+    "hexo-tag-ogp-link-preview": "^1.2.0",
     "hexo-theme-landscape": "^1.0.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-container": "^4.0.0",
     "markdown-it-image-figures": "^2.1.1"
+  },
+  "devDependencies": {
+    "hexo-browsersync": "^0.3.0"
   }
 }

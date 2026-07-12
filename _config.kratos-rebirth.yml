@@ -27,9 +27,9 @@ image:
 # 顶部导航栏配置
 nav:
   items:
-    - label: 首頁
+    - label: 本站首頁
       icon: home
-      url: https://yuaner.tw
+      url: /
     - label: 所有文章
       icon: <i class="fa-regular fa-file-zipper"></i>
       url: /archives/
@@ -54,6 +54,10 @@ nav:
     - label: 搜尋
       icon: search
       url: /search/
+    - label: 我的主頁
+      float_right: true
+      icon: home
+      url: https://yuaner.tw
     - label: 舊站
       float_right: true
       icon: <i class="fa-solid fa-right-to-bracket"></i>
@@ -179,7 +183,7 @@ comments:
       post: ""
       page: ""
   count:
-    enable_at: 
+    enable_at:
     - index
     - post
     template:
@@ -200,10 +204,12 @@ visit_count:
 additional_injections:
   head: |
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/patch.css">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/spoiler.css">
     <link rel="stylesheet" href="/css/alertbar.css">
     <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/link-preview.css">
   footer: ""
   after_footer: |
     <!-- Matomo -->
@@ -220,8 +226,9 @@ additional_injections:
       })();
     </script>
     <!-- End Matomo Code -->
-    
+
     <script type="module" src="/js/giscus.js"></script>
+    <script src="/js/cf-email-pjax.js" defer></script>
   page404_content: |
     <p>PS. 如果你是從舊連結舊網址過來的，舊文章已經移到另一個網址去了，<a id="try-to-oldsite-url" href="#">你要不要嘗試前往舊站看看啊</a>？</p>
     <script>

@@ -13,7 +13,7 @@ timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://blog.yuaner.tw
+url: https://blog.yuaner.tw
 permalink: :year/:month/:title/
 permalink_defaults: :title/
 pretty_urls:
@@ -154,8 +154,15 @@ calendar:
   single: true
   root: calendar/
 
+link_preview:
+  class_name:
+    anchor_link: link-preview
+    image: not-gallery-item
+  description_length: 140
+  disguise_crawler: true
+
 sitemap:
-  path: 
+  path:
     - sitemap.xml
     - sitemap.txt
   rel: false
