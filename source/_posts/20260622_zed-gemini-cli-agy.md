@@ -142,3 +142,23 @@ cp target/release/agy-acp /usr/local/bin/
 主要原因是：agy-acp橋接器沒有處理這種狀況，出錯也不會顯示錯誤訊息。
 我這邊遇到的真正原因是：帳號被登出，所以我再手動使用 `agy` 指令，然後重新登入以後，再將Zed編輯器重開，就可以正常使用了。
 {% asset_img Screenshot_20260622_063251.png "手動進agy重新登入" %}
+
+## 後續的更新步驟
+其實這招我已經實際用了好一陣子，後來我有好奇這個橋接器還有沒有在做後續改良，然後稍微看了原作者那邊的repo就看到他最近有新的commit，所以我決定要來更新這個橋接器，並順便整理在這篇文章當補充吧。
+
+::: xg-alertbar xg-alertbar-warning
+**更新前請記得關閉執行中的程式**
+包含你正在使用中的Zed程式編輯器也要一起關掉，不然可能會在安裝時發生：
+`cp: 無法建立一般檔案 '/usr/local/bin/agy-acp': 文字檔忙碌中`
+:::
+
+{% asset_img "Screenshot_20260712_012229.png" "agy-acp更新紀錄" %}
+
+```bash
+cd agy-acp #找回你原本放置agy-acp的地方
+git pull origin main #把新版本下載下來
+cargo build --release #重新Build出執行檔
+sudo cp target/release/agy-acp /usr/local/bin/ #以覆蓋的方式安裝進系統內
+```
+
+更新完成以後，就可以把Zed程式碼編輯器打開來繼續用囉～！🎉
