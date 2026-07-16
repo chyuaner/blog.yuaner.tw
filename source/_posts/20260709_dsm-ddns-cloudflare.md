@@ -110,3 +110,8 @@ Github: chyuaner/SynologyCloudflareDDNS
 但長期用下來，發現穩定性沒有預期的好，而且Synology那邊似乎有快取導致有些設定沒有即時更新到，不利於測試，尤其是IPv6好像很常沒有對應上。
 
 所以最後我決定用[Cloudflare DDNS直接更新](#3.%20%E5%AE%89%E8%A3%9DSynologyCloudflareDDNS%E8%85%B3%E6%9C%AC%E5%88%B0Synology%20DSM)不經由Synology伺服器的方案了。
+
+## 參考連結
+* [给群晖添加原生CloudFlare的DDNS功能\-Wood Chen](https://woodchen.ink/archives/add-the-ddns-function-of-the-native-cloudflare-to-synology-z1dlvxy "给群晖添加原生CloudFlare的DDNS功能-Wood Chen")
+* [给群晖添加原生CloudFlare的DDNS功能 \- IT \- SunAI](https://www.sunai.net/t/topic/53 "给群晖添加原生CloudFlare的DDNS功能 - IT - SunAI")
+* [如何從 Synology NAS 取得 Cloudflare DDNS 記錄 – Sakamoto\.blog – 探究科技未知領域](https://www.sakamoto.blog/synology-nas-cloudflare-ddns/ "如何從 Synology NAS 取得 Cloudflare DDNS 記錄 – Sakamoto.blog – 探究科技未知領域")
