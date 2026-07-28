@@ -33,7 +33,7 @@
     "hexo-tag-ogp-link-preview": "^1.2.0",
     "hexo-theme-landscape": "^1.0.0",
     "markdown-it-anchor": "^9.2.0",
-    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-attrs": "^5.0.1",
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-container": "^4.0.0",
     "markdown-it-image-figures": "^2.1.1"
