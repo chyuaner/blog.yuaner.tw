@@ -10,7 +10,9 @@ copyright_notice_template: >-
   本篇依據 <a rel="license nofollow" target="_blank"
   href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hant">CC BY-SA
   4.0 姓名標示-相同方式分享</a> 授權釋出。
+date: 2026-08-07 20:43:51
 ---
+
 
 ## 前言
 我目前的主機規劃是：NAS主機和其他重要主機都會放置在同一個區域網路內，然後用內網IP地址互相直連。如果有傳檔案需求，我會利用sftp掛載其他主機到這台NAS，然後就可以透過DSM管理與跨主機互傳檔案。
