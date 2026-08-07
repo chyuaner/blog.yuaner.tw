@@ -1,6 +1,6 @@
 ---
 title: Synology DSM透過SFTP掛載遠端資料夾時，known_hosts 的儲存位置
-cover:
+cover: Screenshot 2026-08-07 at 15-24-21 Chiu-NAS - Synology DiskStation.png
 categories: Synology
 tags:
   - Synology
